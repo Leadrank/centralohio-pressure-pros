@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts';
+
+const title = `Thank You — ${SITE.brand}`;
+const description = `Thanks for reaching out to ${SITE.brand}. We'll be in touch shortly about your free estimate.`;
+---
+
+<BaseLayout title={title} description={description} path="/thank-you/">
+  <section class="hero">
+    <div class="container center">
+      <h1>Thank You! ✅</h1>
+      <p style="margin-left:auto;margin-right:auto;max-width:620px">
+        Your request is in — thanks for reaching out to {SITE.brand}. We’ll review the details and get
+        back to you shortly with your free estimate. {SITE.phoneHref ? 'Need us sooner? Give us a call.' : 'Feel free to text us a few photos to speed up your quote.'}
+      </p>
+      <div class="btn-row" style="margin-top:1.5rem;justify-content:center">
+        {SITE.phoneHref ? (
+          <a class="btn btn--primary" href={`tel:${SITE.phoneHref}`}>Call {SITE.phoneDisplay}</a>
+        ) : (
+          <a class="btn btn--primary" href="/contact/">Request a Free Estimate</a>
+        )}
+        <a class="btn btn--call" href="/">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

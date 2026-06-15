@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SITE, SERVICE_AREAS, NEIGHBORHOODS } from '../consts';
+import { AREAS_HUB } from '../content';
+
+const liveAreas = NEIGHBORHOODS.filter((n) => n.live);
+const otherAreas = SERVICE_AREAS.filter((a) => !liveAreas.some((n) => n.name === a));
+---
+
+<BaseLayout title={AREAS_HUB.metaTitle} description={AREAS_HUB.metaDescription} path="/service-areas/">
+  <section class="hero">
+    <div class="container">
+      <h1>{AREAS_HUB.heroH1}</h1>
+      <p>{AREAS_HUB.heroSub}</p>
+      <div class="btn-row" style="margin-top:1.75rem">
+        {SITE.phoneHref ? (
+          <a class="btn btn--primary" href={`tel:${SITE.phoneHref}`}>Call {SITE.phoneDisplay}</a>
+        ) : (
+          <a class="btn btn--primary" href="/contact/">Request a Free Estimate</a>
+        )}
+        <a class="btn btn--call" href="/contact/">Get a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:820px">
+      <p set:html={AREAS_HUB.intro} />
+    </div>
+    {liveAreas.length > 0 && (
+      <div class="container" style="margin-top:1.5rem">
+        <div class="center"><h2>Areas We Serve</h2></div>
+        <div class="grid" style="margin-top:1.5rem">
+          {liveAreas.map((n) => (
+            <div class="card">
+              <a class="card-link" href={`/${n.slug}/`}><h3>{n.name}</h3><p>{n.blurb}</p></a>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+    <div class="container" style="margin-top:2.5rem">
+      <div class="center"><h2>Also Serving</h2></div>
+      <div class="areas" style="margin-top:1.5rem">
+        {otherAreas.map((a) => <span>{a}</span>)}
+      </div>
+      <p class="center" style="margin-top:1.5rem">
+        Don’t see your area? We likely still cover it — <a href="/contact/">just ask</a>.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand heading={AREAS_HUB.ctaHeading} />
+</BaseLayout>

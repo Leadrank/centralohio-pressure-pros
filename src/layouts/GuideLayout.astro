@@ -1,0 +1,111 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SITE, RESOURCES } from '../consts';
+
+interface FAQ { q: string; a: string; }
+interface Props {
+  slug: string;
+  h1: string;
+  title: string;          // full <title>
+  metaDescription: string;
+  datePublished: string;  // ISO date, passed in (no Date.now in build)
+  faqs?: FAQ[];
+}
+
+const { slug, h1, title, metaDescription, datePublished, faqs = [] } = Astro.props;
+const path = `/${slug}/`;
+const others = RESOURCES.filter((r) => r.slug !== slug);
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: h1,
+  description: metaDescription,
+  datePublished,
+  author: { '@type': 'Organization', name: SITE.brand },
+  publisher: { '@type': 'Organization', name: SITE.brand },
+  mainEntityOfPage: `${SITE.url}${path}`,
+};
+const faqSchema = faqs.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+  : null;
+
+// Breadcrumb: Home → this guide. (No standalone resources hub route exists; guides
+// are surfaced from the footer + cross-links, so we keep the trail to real pages.)
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE.url}/` },
+    { '@type': 'ListItem', position: 2, name: h1, item: `${SITE.url}${path}` },
+  ],
+};
+---
+
+<BaseLayout title={title} description={metaDescription} path={path}>
+  <section class="hero">
+    <div class="container">
+      <h1>{h1}</h1>
+      <p>Local guidance from {SITE.brand} — your {SITE.serviceNoun} specialists in {SITE.city}, {SITE.stateLong}.</p>
+    </div>
+  </section>
+
+  <article class="section">
+    <div class="container guide-body" style="max-width:760px">
+      <slot />
+    </div>
+  </article>
+
+  {faqs.length > 0 && (
+    <section class="section section--soft">
+      <div class="container">
+        <div class="center"><h2>Frequently Asked Questions</h2></div>
+        <div class="faq" style="margin-top:2rem; max-width:780px; margin-left:auto; margin-right:auto;">
+          {faqs.map((f) => (
+            <details>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="container">
+      <div class="center"><h2>More Guides</h2></div>
+      <div class="grid" style="margin-top:2rem">
+        {others.map((r) => (
+          <div class="card">
+            <a class="card-link" href={`/${r.slug}/`}><h3>{r.title}</h3><p>{r.blurb}</p></a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+</BaseLayout>
+
+<style>
+  .guide-body h2 { margin-top: 2rem; }
+  .guide-body ul, .guide-body ol { margin-bottom: 1rem; }
+  .guide-body li { margin-bottom: .4rem; }
+  .guide-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .guide-body th, .guide-body td { border: 1px solid var(--border); padding: .6rem .8rem; text-align: left; }
+  .guide-body th { background: var(--bg-soft); }
+</style>

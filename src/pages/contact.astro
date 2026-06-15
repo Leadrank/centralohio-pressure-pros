@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SITE, SERVICES, SERVICE_AREAS } from '../consts';
+import { CONTACT } from '../content';
+
+// Form delivery: prefer Web3Forms (emails the lead straight to the owner's inbox,
+// free, no backend) when an access key is set; otherwise fall back to the leadsink
+// Worker. Either way the conversion beacon in BaseLayout fires on submit, so the
+// dashboard still records form_submit conversions.
+const useWeb3Forms = SITE.formsAccessKey.length > 0;
+const formAction = useWeb3Forms ? 'https://api.web3forms.com/submit' : `${SITE.leadEndpoint}/lead`;
+const formReady = useWeb3Forms || SITE.leadEndpoint.length > 0;
+---
+
+<BaseLayout title={CONTACT.metaTitle} description={CONTACT.metaDescription} path="/contact/">
+  <section class="hero">
+    <div class="container">
+      <h1>{CONTACT.heroH1}</h1>
+      <p set:html={CONTACT.heroSub} />
+      {SITE.phoneHref ? (
+        <div class="btn-row" style="margin-top:1.5rem">
+          <a class="btn btn--primary" href={`tel:${SITE.phoneHref}`}>Call {SITE.phoneDisplay}</a>
+        </div>
+      ) : null}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="display:grid; gap:2.5rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+      <div>
+        <h2>Request a Free Estimate</h2>
+        <form class="estimate-form" action={formAction} method="POST">
+          {useWeb3Forms ? (
+            <Fragment>
+              <input type="hidden" name="access_key" value={SITE.formsAccessKey} />
+              <input type="hidden" name="redirect" value={`${SITE.url}/thank-you/`} />
+              <input type="hidden" name="subject" value={`New estimate request — ${SITE.brand}`} />
+              <input type="hidden" name="from_name" value={SITE.brand} />
+            </Fragment>
+          ) : (
+            <input type="hidden" name="_redirect" value={`${SITE.url}/thank-you/`} />
+          )}
+          <input type="hidden" name="site" value={SITE.slug} />
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+          <label>Phone<input type="tel" name="phone" required autocomplete="tel" /></label>
+          <label>Email<input type="email" name="email" autocomplete="email" /></label>
+          <label>Service Address (city/suburb)<input type="text" name="address" autocomplete="street-address" /></label>
+          {CONTACT.qualifier && (
+            <label>{CONTACT.qualifier.label}
+              <select name={CONTACT.qualifier.name}>
+                <option value="">Select…</option>
+                {CONTACT.qualifier.options.map((o) => <option>{o}</option>)}
+              </select>
+            </label>
+          )}
+          <label>What do you need?
+            <select name="service">
+              <option value="">Select a service…</option>
+              {SERVICES.map((s) => <option value={s.name}>{s.name}</option>)}
+              <option value="Other / Not sure">Other / Not sure</option>
+            </select>
+          </label>
+          <label>Details
+            <textarea name="message" rows="4" placeholder={CONTACT.detailsPlaceholder}></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary" style="width:100%">Send My Free Estimate Request</button>
+          {!formReady && (
+            <p class="form-note">⚠️ Form delivery isn’t connected yet — set <code>formsAccessKey</code> (Web3Forms) or <code>leadEndpoint</code> in the spec before launch.</p>
+          )}
+        </form>
+      </div>
+
+      <div>
+        <h2>Reach Us Directly</h2>
+        <p>
+          {SITE.phoneHref && <><strong>Phone:</strong> <a href={`tel:${SITE.phoneHref}`}>{SITE.phoneDisplay}</a><br /></>}
+          <strong>Email:</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        </p>
+        <p><strong>Hours:</strong> Mon–Sat, 8am–6pm</p>
+        <h3 style="margin-top:1.5rem">Service Area</h3>
+        <p>We serve {SITE.city}, {SITE.stateLong} and nearby suburbs:</p>
+        <div class="areas" style="justify-content:flex-start">
+          {SERVICE_AREAS.map((a) => <span>{a}</span>)}
+        </div>
+        <p style="margin-top:1.5rem"><strong>Tip:</strong> texting or emailing a couple of photos gets you the fastest, most accurate quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand heading={CONTACT.ctaHeading} />
+</BaseLayout>
+
+<style>
+  .estimate-form label { display:block; margin-bottom:1rem; font-weight:600; font-size:.95rem; }
+  .estimate-form input, .estimate-form select, .estimate-form textarea {
+    display:block; width:100%; margin-top:.35rem; padding:.7rem .8rem;
+    border:1px solid var(--border); border-radius:8px; font:inherit; font-weight:400;
+  }
+  .estimate-form input[type="file"] { padding:.4rem; }
+  .estimate-form input:focus, .estimate-form select:focus, .estimate-form textarea:focus {
+    outline:2px solid var(--green); border-color:var(--green);
+  }
+  .form-note { margin-top:1rem; font-size:.85rem; color:#9a6b00; background:#fff7e6; border:1px solid #ffe2a8; padding:.6rem .8rem; border-radius:8px; }
+</style>

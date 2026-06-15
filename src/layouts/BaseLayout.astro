@@ -1,0 +1,131 @@
+---
+import { SITE, SERVICE_AREAS } from '../consts';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Path-only canonical, e.g. "/patio-restoration/". Defaults to current page. */
+  path?: string;
+}
+
+const { title, description, path = Astro.url.pathname } = Astro.props;
+const canonical = new URL(path, Astro.site).href;
+
+// Site-wide LocalBusiness schema. areaServed lists the suburbs we target.
+// @type, priceRange, and telephone are driven by consts so the layout is reusable
+// across niches and works before a tracking number is provisioned.
+const localBusiness = {
+  '@context': 'https://schema.org',
+  '@type': SITE.schemaType,
+  name: SITE.brand,
+  description: `${SITE.brand} — ${SITE.tagline}. Serving ${SITE.city}, ${SITE.stateLong} and nearby suburbs.`,
+  url: SITE.url,
+  ...(SITE.phoneHref ? { telephone: SITE.phoneHref } : {}),
+  email: SITE.email,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: SITE.city,
+    addressRegion: SITE.state,
+    addressCountry: 'US',
+  },
+  areaServed: SERVICE_AREAS.map((a) => ({ '@type': 'Place', name: a })),
+  priceRange: SITE.priceRange,
+};
+
+const ogImage = new URL('/og.png', Astro.site).href;
+
+// BreadcrumbList from the URL path (Home > …). Emitted only on non-home pages.
+const segs = path.split('/').filter(Boolean);
+const tc = (s) => s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+const _crumbs = [{ name: 'Home', url: new URL('/', Astro.site).href }];
+let _acc = '';
+for (const s of segs) { _acc += '/' + s; _crumbs.push({ name: tc(s), url: new URL(_acc + '/', Astro.site).href }); }
+const breadcrumbList = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: _crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.url })),
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {SITE.gscVerification && <meta name="google-site-verification" content={SITE.gscVerification} />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={SITE.brand} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
+    {segs.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbList)} />}
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <a class="mobile-call" href={SITE.phoneHref ? `tel:${SITE.phoneHref}` : "/contact/"}>
+      {SITE.phoneHref ? `📞 Call Now — Free Estimate` : `📋 Request a Free Estimate`}
+    </a>
+
+    {/* Conversion beacon → lead-sink Worker. No-op when leadEndpoint is empty. */}
+    <script define:vars={{ LE: SITE.leadEndpoint, SLUG: SITE.slug }}>
+      (function () {
+        if (!LE) return;
+        function send(type) {
+          try {
+            var body = JSON.stringify({ site: SLUG, type: type, path: location.pathname });
+            navigator.sendBeacon(LE + '/e', new Blob([body], { type: 'text/plain' }));
+          } catch (e) {}
+        }
+        send('pageview');
+        document.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('a[href]');
+          if (!a) return;
+          var h = a.getAttribute('href') || '';
+          if (h.indexOf('tel:') === 0) send('call_click');
+          else if (h.indexOf('mailto:') === 0) send('email_click');
+        }, true);
+        document.addEventListener('submit', function (e) {
+          var form = e.target;
+          if (!form || form.tagName !== 'FORM') return;
+          send('form_submit');
+          // Also store the lead in leadsink (queryable + feeds the lead report)
+          // when the form posts to Web3Forms for email. Sites that post natively
+          // to /lead already store, so skip those to avoid a duplicate row.
+          // Best-effort, fire-and-forget — never blocks the real submit.
+          var act = form.getAttribute('action') || '';
+          if (form.classList.contains('estimate-form') && act.indexOf('web3forms') !== -1) {
+            try {
+              var fd = new FormData(form), p = new URLSearchParams();
+              p.set('site', SLUG);
+              ['name', 'phone', 'email', 'address', 'service', 'surface', 'message', 'botcheck'].forEach(function (k) {
+                var v = fd.get(k);
+                if (typeof v === 'string') p.set(k, v);
+              });
+              navigator.sendBeacon(LE + '/lead', new Blob([p.toString()], { type: 'application/x-www-form-urlencoded' }));
+            } catch (e2) {}
+          }
+        }, true);
+      })();
+    </script>
+  </body>
+</html>

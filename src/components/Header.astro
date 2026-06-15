@@ -1,0 +1,25 @@
+---
+import { SITE } from '../consts';
+// Render the brand from SITE.brand, accenting the last word (e.g. "Columbus Patio Pros"
+// -> "Columbus Patio <span>Pros</span>"). Keeps the logo correct for any site.
+const _parts = SITE.brand.split(' ');
+const brandLast = _parts.pop();
+const brandLead = _parts.join(' ');
+---
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">{brandLead} <span>{brandLast}</span></a>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/service-areas/">Service Areas</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      {SITE.phoneHref ? (
+        <a class="header-call" href={`tel:${SITE.phoneHref}`}>{SITE.phoneDisplay}</a>
+      ) : null}
+    </nav>
+  </div>
+</header>

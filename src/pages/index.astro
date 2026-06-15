@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SITE, SERVICES, SERVICE_AREAS } from '../consts';
+import { HOME } from '../content';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: HOME.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+
+<BaseLayout title={HOME.metaTitle} description={HOME.metaDescription} path="/">
+  <section class="hero">
+    <div class="container">
+      <h1 set:html={HOME.heroH1} />
+      <p set:html={HOME.heroIntro} />
+      <div class="btn-row" style="margin-top:1.75rem">
+        {SITE.phoneHref ? (
+          <a class="btn btn--primary" href={`tel:${SITE.phoneHref}`}>Call {SITE.phoneDisplay}</a>
+        ) : (
+          <a class="btn btn--primary" href="/contact/">Request a Free Estimate</a>
+        )}
+        <a class="btn btn--call" href="/contact/">Get a Free Estimate</a>
+      </div>
+      <div class="trust">
+        {HOME.trustBadges.map((b) => <span>{b}</span>)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <div class="center">
+        <h2>{HOME.servicesHeading}</h2>
+        <p class="lead">{HOME.servicesLead}</p>
+      </div>
+      <div class="grid" style="margin-top:2rem">
+        {SERVICES.filter((s) => s.live).map((s) => (
+          <div class="card">
+            <a class="card-link" href={`/${s.slug}/`}>
+              <h3>{s.name}</h3>
+              <p>{s.short}</p>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="center"><h2>{HOME.processHeading}</h2></div>
+      <div class="features" style="margin-top:2rem">
+        {HOME.process.map((step, i) => (
+          <div class="feature"><h3>{i + 1}. {step.title}</h3><p set:html={step.body} /></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase / before-after placeholder -->
+  <section class="section">
+    <div class="container center">
+      <h2>{HOME.showcaseHeading}</h2>
+      <p class="lead">{HOME.showcaseLead}</p>
+      <p><a class="btn btn--call" href="/contact/" style="margin-top:1rem">Get Your Free Estimate</a></p>
+    </div>
+  </section>
+
+  <!-- Service areas -->
+  <section class="section section--soft">
+    <div class="container center">
+      <h2>Serving {SITE.city} &amp; Surrounding Suburbs</h2>
+      <p class="lead">{SITE.serviceType} across {SITE.city}, {SITE.stateLong} and nearby communities:</p>
+      <div class="areas" style="margin-top:1.5rem">
+        {SERVICE_AREAS.map((a) => <span>{a}</span>)}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="center"><h2>Frequently Asked Questions</h2></div>
+      <div class="faq" style="margin-top:2rem; max-width:780px; margin-left:auto; margin-right:auto;">
+        {HOME.faqs.map((f) => (
+          <details><summary>{f.q}</summary><p set:html={f.a} /></details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand heading={HOME.ctaHeading} />
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</BaseLayout>

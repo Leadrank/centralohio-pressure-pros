@@ -1,0 +1,51 @@
+---
+import { SITE, SERVICES, SERVICE_AREAS, RESOURCES } from '../consts';
+const year = 2026; // static-safe; bump when rebuilding yearly
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>{SITE.brand}</h4>
+        <p>{SITE.tagline}</p>
+        <p>
+          {SITE.phoneHref && <><a href={`tel:${SITE.phoneHref}`}>{SITE.phoneDisplay}</a><br /></>}
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        </p>
+      </div>
+      <div>
+        <h4><a href="/services/">Services</a></h4>
+        <ul>
+          {SERVICES.map((s) => (
+            <li>{s.live ? <a href={`/${s.slug}/`}>{s.name}</a> : s.name}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4><a href="/service-areas/">Service Areas</a></h4>
+        <ul>
+          {SERVICE_AREAS.map((a) => <li>{a}</li>)}
+        </ul>
+      </div>
+      <div>
+        {RESOURCES.length > 0 && (
+          <>
+            <h4>Guides</h4>
+            <ul>
+              {RESOURCES.map((r) => <li><a href={`/${r.slug}/`}>{r.title}</a></li>)}
+            </ul>
+          </>
+        )}
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/contact/">Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {year} {SITE.brand}. Serving {SITE.city}, {SITE.stateLong} and surrounding communities. Licensed &amp; insured.</p>
+    </div>
+  </div>
+</footer>

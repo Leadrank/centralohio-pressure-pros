@@ -1,0 +1,23 @@
+# build output
+dist/
+# generated types
+.astro/
+# dependencies
+node_modules/
+# logs
+npm-debug.log*
+# environment / secrets — never commit
+.env
+.env.*
+.envrc
+# macOS
+.DS_Store
+# editor
+.vscode/
+# wrangler files
+.wrangler/
+.dev.vars*
+!.dev.vars.example
+!.env.example
+# cloudflare generated
+worker-configuration.d.ts

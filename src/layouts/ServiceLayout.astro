@@ -1,0 +1,145 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SITE, SERVICES, SERVICE_AREAS } from '../consts';
+
+interface FAQ { q: string; a: string; }
+interface Props {
+  name: string;          // e.g. "Trimming & Pruning"
+  slug: string;          // e.g. "trimming-pruning"
+  h1: string;            // keyword-rich H1
+  metaDescription: string;
+  heroSub: string;
+  intro: string[];       // body paragraphs
+  needTitle: string;     // e.g. "When You Need Tree Trimming"
+  needItems: string[];   // bullet points (may include <strong>)
+  faqs: FAQ[];
+  ctaHeading: string;
+}
+
+const { name, slug, h1, metaDescription, heroSub, intro, needTitle, needItems, faqs, ctaHeading } = Astro.props;
+const title = `${name} in ${SITE.city}, ${SITE.state} | ${SITE.brand}`;
+const path = `/${slug}/`;
+const siblings = SERVICES.filter((s) => s.slug !== slug);
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: name,
+  provider: { '@type': 'LocalBusiness', name: SITE.brand, ...(SITE.phoneHref ? { telephone: SITE.phoneHref } : {}), url: SITE.url },
+  areaServed: { '@type': 'City', name: `${SITE.city}, ${SITE.stateLong}` },
+  description: metaDescription,
+  url: `${SITE.url}${path}`,
+};
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+// Breadcrumb: Home → Services hub → this service.
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE.url}/services/` },
+    { '@type': 'ListItem', position: 3, name: name, item: `${SITE.url}${path}` },
+  ],
+};
+---
+
+<BaseLayout title={title} description={metaDescription} path={path}>
+  <section class="hero">
+    <div class="container">
+      <h1>{h1}</h1>
+      <p>{heroSub}</p>
+      <div class="btn-row" style="margin-top:1.75rem">
+        {SITE.phoneHref ? (
+          <a class="btn btn--primary" href={`tel:${SITE.phoneHref}`}>Call {SITE.phoneDisplay}</a>
+        ) : (
+          <a class="btn btn--primary" href="/contact/">Request a Free Estimate</a>
+        )}
+        <a class="btn btn--call" href="/contact/">Get a Free Estimate</a>
+      </div>
+      <div class="trust">
+        <span>Licensed &amp; Insured</span>
+        <span>Free Estimates</span>
+        <span>Local to {SITE.city}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:800px">
+      {intro.map((p) => <p set:html={p} />)}
+
+      <h2 style="margin-top:2rem">{needTitle}</h2>
+      <ul>
+        {needItems.map((i) => <li set:html={i} />)}
+      </ul>
+
+      <h2 style="margin-top:2rem">Licensed, Insured &amp; Local Experts</h2>
+      <p>
+        We are fully licensed to operate in {SITE.stateLong} and carry comprehensive general liability insurance. Proof of licensing and current insurance certificates are available on request — simply ask when we provide your free written estimate.
+      </p>
+      <p>
+        {/* OWNER/CREW BIO PLACEHOLDER — replace with real details from the renter once signed. Include owner name and story, years of experience, specific expertise with {SITE.city}-area {SITE.serviceNoun} (e.g. local conditions, HOAs, materials), crew qualifications, and any manufacturer certifications. Add a photo when available from the renter. */}
+        The work is performed by experienced local professionals who specialize in {SITE.serviceNoun} for {SITE.city} and surrounding communities. We know the local conditions and standards.
+      </p>
+      <p>
+        Real results and reviews build trust. Request your free estimate and we’ll share recent before-and-after photos from comparable jobs in your area plus customer references. On-page Google reviews and job-site proof are priorities as we grow our local track record. <strong>For the renter:</strong> Claim/verify your Google Business Profile right away (primary category: {SITE.serviceType}; appropriate secondaries). Post 1–2x weekly with geo-tagged before/after photos from each service area, ask every completed job for a 5-star review, and reply to every review within 24 hours — this is one of the highest-ROI local ranking signals.
+      </p>
+
+      <h2 style="margin-top:2rem">Why Choose {SITE.brand}</h2>
+      <p>
+        We’re local to {SITE.city}, fully licensed and insured, and committed to careful work and
+        honest pricing. You’ll get a clear written estimate before we start and a clean property when
+        we finish.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="center"><h2>{name} — Questions, Answered</h2></div>
+      <div class="faq" style="margin-top:2rem; max-width:780px; margin-left:auto; margin-right:auto;">
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="center"><h2>Our Other Services</h2></div>
+      <div class="grid" style="margin-top:2rem">
+        {siblings.map((s) => (
+          <div class="card">
+            {s.live ? (
+              <a class="card-link" href={`/${s.slug}/`}><h3>{s.name}</h3><p>{s.short}</p></a>
+            ) : (
+              <><h3>{s.name}</h3><p>{s.short}</p></>
+            )}
+          </div>
+        ))}
+      </div>
+      <p class="center" style="margin-top:1.5rem">
+        Serving {SERVICE_AREAS.slice(0, 4).join(', ')} and all of {SITE.city}, {SITE.stateLong}.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand heading={ctaHeading} />
+
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+</BaseLayout>

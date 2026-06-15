@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts';
+
+const title = `Page Not Found | ${SITE.brand}`;
+const description = `The page you’re looking for isn’t here. Head back home or contact us about ${SITE.serviceNoun} in ${SITE.city}, ${SITE.state}.`;
+---
+
+<BaseLayout title={title} description={description} path="/404/">
+  <section class="hero">
+    <div class="container center">
+      <h1>Page Not Found</h1>
+      <p style="margin-left:auto;margin-right:auto">
+        Sorry — the page you’re looking for doesn’t exist. Let’s get you back on track.
+      </p>
+      <div class="btn-row" style="margin-top:1.5rem;justify-content:center">
+        {SITE.phoneHref ? (
+          <a class="btn btn--primary" href={`tel:${SITE.phoneHref}`}>Call {SITE.phoneDisplay}</a>
+        ) : (
+          <a class="btn btn--primary" href="/contact/">Request a Free Estimate</a>
+        )}
+        <a class="btn btn--call" href="/">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
