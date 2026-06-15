@@ -1,15 +1,15 @@
 :root {
-  --green: #1f6b3b;
-  --green-dark: #154d2a;
-  --accent: #f4a017;
-  --ink: #1a1d1a;
-  --muted: #5a6258;
+  --green: #0E6BA8;
+  --green-dark: #084E7A;
+  --accent: #FFC400;
+  --ink: #16202b;
+  --muted: #54637a;
   --bg: #ffffff;
-  --bg-soft: #f3f6f2;
-  --border: #e2e8e0;
+  --bg-soft: #eef4f9;
+  --border: #dbe6f0;
   --maxw: 1120px;
-  --radius: 12px;
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius: 8px;
+  --font: "Avenir Next", "Segoe UI", system-ui, Roboto, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
