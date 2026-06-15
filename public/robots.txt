@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://centralohiopressurepros.com/sitemap-index.xml
+Sitemap: https://centralohiopressurewashing.com/sitemap-index.xml

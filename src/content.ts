@@ -2,7 +2,7 @@
 // All site prose. Structure/nav lives in consts.ts.
 
 export const HOME = {
-  "metaTitle": "House Soft Washing, Roof Washing & Pressure Cleaning in Columbus, OH | Central Ohio Pressure Pros",
+  "metaTitle": "House Soft Washing, Roof Washing & Pressure Cleaning in Columbus, OH | Central Ohio Pressure Washing",
   "metaDescription": "Professional house soft washing, roof soft washing, driveway pressure washing, deck & patio cleaning in Columbus, OH and suburbs. Ohio freeze-thaw & algae experts. Free estimates.",
   "heroH1": "House Soft Washing, Roof Washing & Pressure Cleaning in Columbus, OH",
   "heroIntro": "Restore your home's curb appeal with safe, effective soft washing and pressure cleaning. We remove algae, mold, mildew, and grime from siding, roofs, driveways, decks, and patios — without damaging surfaces. Built for Central Ohio's freeze-thaw cycles and humid summers.",
@@ -61,12 +61,12 @@ export const HOME = {
 } as const;
 
 export const ABOUT = {
-  "metaTitle": "About Central Ohio Pressure Pros — Columbus, OH",
-  "metaDescription": "Central Ohio Pressure Pros provides professional house soft washing, roof washing, driveway and concrete cleaning, and deck/patio washing across Columbus and suburbs. Local, insured, focused on results.",
+  "metaTitle": "About Central Ohio Pressure Washing — Columbus, OH",
+  "metaDescription": "Central Ohio Pressure Washing provides professional house soft washing, roof washing, driveway and concrete cleaning, and deck/patio washing across Columbus and suburbs. Local, insured, focused on results.",
   "heroSub": "Local pressure washing and soft washing specialists — restoring curb appeal for Columbus-area homes and businesses.",
   "bodyHeading": "Exterior Cleaning Experts You Can Trust",
   "bodyParagraphs": [
-    "Central Ohio Pressure Pros focuses on safe, effective exterior cleaning that protects your investment. We use the right techniques — soft washing for organic growth on siding and roofs, appropriate pressure for concrete and hardscapes — so your home looks its best without damage.",
+    "Central Ohio Pressure Washing focuses on safe, effective exterior cleaning that protects your investment. We use the right techniques — soft washing for organic growth on siding and roofs, appropriate pressure for concrete and hardscapes — so your home looks its best without damage.",
     "We’re local to Columbus, fully insured, and experienced with Central Ohio’s unique challenges: heavy spring pollen, humid summers that grow algae and mold, and harsh freeze-thaw winters that can trap moisture in dirty surfaces. Every job starts with a free written estimate and ends with a property that’s clean and protected.",
     "We are fully licensed to operate in our state and carry comprehensive general liability insurance. Proof of licensing and current insurance certificates are available on request — simply ask when we provide your free written estimate.",
     "The work is performed by experienced local professionals who specialize in our services. We know the local conditions and standards. {/* OWNER/CREW BIO PLACEHOLDER — replace with real details from the renter once signed. Include owner name and story, years of experience, specific expertise with local conditions, HOAs, materials, crew qualifications, and any manufacturer certifications. Add a photo when available from the renter. */}",
@@ -95,7 +95,7 @@ export const ABOUT = {
 } as const;
 
 export const CONTACT = {
-  "metaTitle": "Contact Us — Free Pressure Washing Estimate in Columbus, OH | Central Ohio Pressure Pros",
+  "metaTitle": "Contact Us — Free Pressure Washing Estimate in Columbus, OH | Central Ohio Pressure Washing",
   "metaDescription": "Request a free house soft washing, roof washing, or driveway cleaning estimate in Columbus, OH. Send photos for a fast quote. Insured, local crew.",
   "heroH1": "Get Your Free Exterior Cleaning Estimate",
   "heroSub": "Tell us about your home or send a few photos — and we’ll get you a fast, accurate quote. No obligation.",
@@ -104,7 +104,7 @@ export const CONTACT = {
 } as const;
 
 export const FAQ_PAGE = {
-  "metaTitle": "Pressure Washing & Soft Washing FAQs — Columbus, OH | Central Ohio Pressure Pros",
+  "metaTitle": "Pressure Washing & Soft Washing FAQs — Columbus, OH | Central Ohio Pressure Washing",
   "metaDescription": "Answers to common Central Ohio pressure washing questions: soft wash vs pressure wash, cost, how often, safety for plants and roofs, and what to expect. From local experts.",
   "heroH1": "Pressure Washing & Soft Washing FAQs — Columbus, OH",
   "heroSub": "Straight answers about cost, safety, results, and hiring a local exterior cleaning crew.",
@@ -182,18 +182,18 @@ export const FAQ_PAGE = {
 } as const;
 
 export const SERVICES_HUB = {
-  "metaTitle": "Pressure Washing & Soft Washing Services in Columbus, OH | Central Ohio Pressure Pros",
+  "metaTitle": "Pressure Washing & Soft Washing Services in Columbus, OH | Central Ohio Pressure Washing",
   "metaDescription": "House soft washing, roof soft washing, driveway pressure washing, deck & patio cleaning, and commercial washing in Columbus, OH and suburbs. Local, insured, free estimates.",
   "heroH1": "Our Pressure Washing & Soft Washing Services in Columbus, OH",
   "heroSub": "Safe, effective cleaning for every exterior surface on your Central Ohio property."
 } as const;
 
 export const AREAS_HUB = {
-  "metaTitle": "Pressure Washing Service Areas — Columbus, OH & Suburbs | Central Ohio Pressure Pros",
-  "metaDescription": "Central Ohio Pressure Pros serves Columbus, OH and suburbs including Westerville, Dublin, Sunbury, Powell, New Albany, Hilliard, and more. House and roof soft washing, concrete cleaning.",
+  "metaTitle": "Pressure Washing Service Areas — Columbus, OH & Suburbs | Central Ohio Pressure Washing",
+  "metaDescription": "Central Ohio Pressure Washing serves Columbus, OH and suburbs including Westerville, Dublin, Sunbury, Powell, New Albany, Hilliard, and more. House and roof soft washing, concrete cleaning.",
   "heroH1": "Pressure Washing & Soft Washing Service Areas Around Columbus, OH",
   "heroSub": "Local soft washing and pressure cleaning for Columbus, Ohio and the surrounding suburbs.",
-  "intro": "Central Ohio Pressure Pros provides house soft washing, roof washing, driveway and concrete cleaning, deck and patio washing, and commercial pressure washing throughout the Columbus metro. We know local siding, roofing materials, and how Ohio weather (freeze-thaw, humidity, pollen) affects exterior surfaces.",
+  "intro": "Central Ohio Pressure Washing provides house soft washing, roof washing, driveway and concrete cleaning, deck and patio washing, and commercial pressure washing throughout the Columbus metro. We know local siding, roofing materials, and how Ohio weather (freeze-thaw, humidity, pollen) affects exterior surfaces.",
   "ctaHeading": "Pressure Washing Near You in the Columbus Area"
 } as const;
 

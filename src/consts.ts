@@ -2,9 +2,9 @@
 // Single source of truth for site-wide structure & nav data.
 
 export const SITE = {
-  "brand": "Central Ohio Pressure Pros",
-  "domain": "centralohiopressurepros.com",
-  "url": "https://centralohiopressurepros.com",
+  "brand": "Central Ohio Pressure Washing",
+  "domain": "centralohiopressurewashing.com",
+  "url": "https://centralohiopressurewashing.com",
   "tagline": "House Soft Washing, Roof Washing & Pressure Cleaning in Columbus, OH",
   "city": "Columbus",
   "state": "OH",
@@ -15,8 +15,8 @@ export const SITE = {
   "priceRange": "$$",
   "phoneDisplay": "",
   "phoneHref": "",
-  "email": "info@centralohiopressurepros.com",
-  "formsAccessKey": "YOUR_WEB3FORMS_KEY_HERE",
+  "email": "info@centralohiopressurewashing.com",
+  "formsAccessKey": "042cd9b2-7c20-47d2-8590-aa8e54b67d63",
   "slug": "centralohio-pressure-pros",
   "leadEndpoint": "https://leadsink.leadrankllc.workers.dev",
   "gscVerification": ""
@@ -111,12 +111,6 @@ export const NEIGHBORHOODS = [
     "slug": "upper-arlington",
     "name": "Upper Arlington",
     "blurb": "House soft washing, roof washing, and concrete cleaning for Upper Arlington, OH homes.",
-    "live": true
-  },
-  {
-    "slug": "hilliard",
-    "name": "Hilliard",
-    "blurb": "Soft washing, roof cleaning, and concrete pressure washing for Hilliard, OH properties.",
     "live": true
   }
 ] as const;

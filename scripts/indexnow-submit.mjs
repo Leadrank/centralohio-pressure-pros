@@ -5,7 +5,7 @@
 import { readFileSync } from 'node:fs';
 
 const KEY = '5a45c934540a8c6ecd080878e2842488';
-const HOST = 'centralohiopressurepros.com';
+const HOST = 'centralohiopressurewashing.com';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const SITEMAP = new URL('../dist/sitemap-0.xml', import.meta.url);
 const ENDPOINT = 'https://api.indexnow.org/indexnow';
