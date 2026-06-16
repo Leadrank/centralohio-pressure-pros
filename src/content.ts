@@ -429,11 +429,13 @@ export const LOCATION_CONTENT = {
   "westerville": {
     "name": "Westerville",
     "slug": "westerville",
-    "metaDescription": "Pressure washing and soft washing services in Westerville, OH. House, roof, driveway, and deck cleaning by local Central Ohio pros. Free estimates.",
+    "serviceType": "Roof Soft Washing",
+    "serviceNoun": "roof soft washing",
+    "metaDescription": "Roof soft washing and house soft washing in Westerville, OH. Safe, low-pressure algae and moss removal for shaded roofs and siding. Free estimates.",
     "intro": [
       "Westerville homeowners and property managers trust us for safe exterior cleaning that handles the area's mature trees, shade, and typical Ohio weather challenges.",
       "We provide house soft washing, roof soft washing, driveway and sidewalk cleaning, and deck/patio restoration throughout Westerville and surrounding neighborhoods.",
-      "Planning a Westerville project? See typical costs in our <a href=\"/pressure-washing-cost-columbus/\">Central Ohio pressure washing cost guide</a> or explore <a href=\"/\">all our Columbus-area services</a>.",
+      "Westerville sits along the Franklin and Delaware county line, and its mature tree canopy keeps roofs shaded — ideal conditions for the black algae streaking our <a href=\"/roof-soft-washing/\">roof soft washing</a> safely removes. See <a href=\"/how-often-should-you-soft-wash-your-house/\">how often a Central Ohio home needs washing</a> or explore <a href=\"/\">all our Columbus-area services</a>.",
       "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
     ],
     "faqs": [
@@ -450,11 +452,13 @@ export const LOCATION_CONTENT = {
   "dublin": {
     "name": "Dublin",
     "slug": "dublin",
-    "metaDescription": "House soft washing, roof washing, and concrete cleaning in Dublin, OH. Local crew serving Dublin and the Columbus northwest suburbs. Free estimates.",
+    "serviceType": "House Soft Washing",
+    "serviceNoun": "house soft washing",
+    "metaDescription": "House soft washing in Dublin, OH. Gentle, low-pressure siding and exterior cleaning for Dublin homes and HOAs. Local crew, free estimates.",
     "intro": [
       "Dublin's mix of established neighborhoods and corporate areas means a wide range of exterior surfaces that benefit from regular professional cleaning.",
       "We handle residential soft washing and pressure washing as well as commercial storefronts, parking areas, and common spaces for HOAs and property managers.",
-      "Interested in Dublin service? Check our <a href=\"/pressure-washing-cost-columbus/\">pricing guide</a> or see <a href=\"/\">everything we offer across Central Ohio</a>.",
+      "Most Dublin homes sit in Franklin County neighborhoods and HOAs with real curb-appeal standards, where gentle <a href=\"/house-soft-washing/\">house soft washing</a> lifts algae and mildew from siding without the damage high pressure can cause. Not sure which method you need? Read <a href=\"/soft-washing-vs-pressure-washing-columbus/\">soft washing vs pressure washing</a> or see <a href=\"/\">everything we offer across Central Ohio</a>.",
       "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
     ],
     "faqs": [
@@ -471,11 +475,13 @@ export const LOCATION_CONTENT = {
   "sunbury": {
     "name": "Sunbury",
     "slug": "sunbury",
-    "metaDescription": "Pressure washing services in Sunbury, OH. House soft washing, roof cleaning, driveway and patio washing. Local to Delaware County. Free estimates.",
+    "serviceType": "Driveway & Concrete Pressure Washing",
+    "serviceNoun": "driveway and concrete pressure washing",
+    "metaDescription": "Driveway and concrete pressure washing in Sunbury, OH. Removes dirt, algae, and freeze-thaw staining from drives, aprons, and walkways. Free estimates.",
     "intro": [
       "Sunbury and the surrounding Delaware County area have a growing mix of newer construction and established properties that all face the same Central Ohio exterior challenges.",
       "We provide the full range of residential and light commercial washing services with a focus on safe methods for the varied siding and roofing common in the area.",
-      "Curious about pricing in the Sunbury area? See our <a href=\"/pressure-washing-cost-columbus/\">Central Ohio cost guide</a> or browse <a href=\"/\">all our services</a>.",
+      "Many newer Sunbury and Delaware County homes have large concrete drives and aprons that trap dirt and show freeze-thaw staining — exactly what our <a href=\"/driveway-concrete-pressure-washing/\">driveway and concrete pressure washing</a> restores. Check typical pricing in our <a href=\"/pressure-washing-cost-columbus/\">Central Ohio cost guide</a> or browse <a href=\"/\">all our services</a>.",
       "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
     ],
     "faqs": [
@@ -492,11 +498,13 @@ export const LOCATION_CONTENT = {
   "powell": {
     "name": "Powell",
     "slug": "powell",
-    "metaDescription": "Soft washing and pressure washing in Powell, OH. Professional exterior cleaning for homes and small commercial in Powell and Liberty Township. Free estimates.",
+    "serviceType": "House & Roof Soft Washing",
+    "serviceNoun": "house and roof soft washing",
+    "metaDescription": "House and roof soft washing in Powell, OH. Multi-surface exterior cleaning for larger Powell and Liberty Township homes. Local crew, free estimates.",
     "intro": [
       "Powell and Liberty Township feature a blend of established neighborhoods and newer developments, all benefiting from regular professional exterior maintenance.",
       "We offer house soft washing, roof soft washing, driveway and patio cleaning, and commercial washing tailored to the materials and conditions common in the area.",
-      "See what typical projects cost in our <a href=\"/pressure-washing-cost-columbus/\">pricing guide</a> or learn more about <a href=\"/\">our full range of Central Ohio services</a>.",
+      "Powell and Liberty Township homes in Delaware County tend to be larger, multi-surface properties, so we often pair <a href=\"/house-soft-washing/\">house soft washing</a> with roof and concrete cleaning in a single visit. See <a href=\"/how-often-should-you-soft-wash-your-house/\">how often homes here need washing</a> or learn more about <a href=\"/\">our full range of Central Ohio services</a>.",
       "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
     ],
     "faqs": [
@@ -513,11 +521,13 @@ export const LOCATION_CONTENT = {
   "new-albany": {
     "name": "New Albany",
     "slug": "new-albany",
-    "metaDescription": "House soft washing, roof washing, and driveway cleaning in New Albany, OH and Plain Township. Local Central Ohio crew. Free estimates.",
+    "serviceType": "Soft Washing",
+    "serviceNoun": "soft washing",
+    "metaDescription": "Soft washing in New Albany, OH. Careful, low-pressure cleaning for Georgian brick, painted trim, and roofs on upscale New Albany homes. Free estimates.",
     "intro": [
       "New Albany's upscale neighborhoods and corporate presence mean high standards for exterior appearance and curb appeal.",
       "We provide careful, professional soft washing and pressure washing for high-end residential properties, as well as commercial and light industrial accounts in the area.",
-      "Interested in New Albany service? Review our <a href=\"/pressure-washing-cost-columbus/\">cost guide</a> or see <a href=\"/\">all our Columbus-metro services</a>.",
+      "New Albany homes — many within the planned community and its architectural-review standards — call for careful, low-pressure <a href=\"/house-soft-washing/\">soft washing</a> that protects Georgian brick, painted trim, and roofing. Learn <a href=\"/soft-washing-vs-pressure-washing-columbus/\">why soft washing beats pressure washing</a> on delicate surfaces, or see <a href=\"/\">all our Columbus-metro services</a>.",
       "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
     ],
     "faqs": [
@@ -534,11 +544,13 @@ export const LOCATION_CONTENT = {
   "hilliard": {
     "name": "Hilliard",
     "slug": "hilliard",
-    "metaDescription": "Pressure washing and soft washing services in Hilliard, OH. House, roof, driveway, and commercial cleaning. Local to northwest Columbus suburbs. Free estimates.",
+    "serviceType": "Commercial Pressure Washing",
+    "serviceNoun": "commercial pressure washing",
+    "metaDescription": "Commercial pressure washing in Hilliard, OH. Storefronts, sidewalks, dumpster pads, and flatwork along Hilliard commercial corridors. Free estimates.",
     "intro": [
       "Hilliard offers a diverse mix of older neighborhoods, newer subdivisions, and commercial corridors — all of which benefit from regular professional exterior cleaning.",
       "We provide house soft washing, roof soft washing, driveway and sidewalk cleaning, deck and patio restoration, and commercial washing throughout Hilliard and adjacent areas.",
-      "Planning work in Hilliard? See our <a href=\"/pressure-washing-cost-columbus/\">pricing information</a> or explore <a href=\"/\">our full service list</a>.",
+      "Hilliard commercial corridors along Cemetery Road and Main Street depend on clean storefronts, sidewalks, and dumpster pads — our <a href=\"/commercial-pressure-washing/\">commercial pressure washing</a> keeps Franklin County properties presentable year-round. See typical rates in our <a href=\"/pressure-washing-cost-columbus/\">pricing guide</a> or explore <a href=\"/\">our full service list</a>.",
       "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
     ],
     "faqs": [
@@ -555,11 +567,13 @@ export const LOCATION_CONTENT = {
   "upper-arlington": {
     "name": "Upper Arlington",
     "slug": "upper-arlington",
-    "metaDescription": "Soft washing and pressure washing in Upper Arlington, OH. Professional exterior cleaning for UA homes and small commercial. Local Columbus crew. Free estimates.",
+    "serviceType": "House Soft Washing",
+    "serviceNoun": "house soft washing",
+    "metaDescription": "House soft washing in Upper Arlington, OH. Gentle, low-pressure cleaning for older and historic UA homes with painted wood, brick, and slate. Free estimates.",
     "intro": [
       "Upper Arlington's established neighborhoods feature a wide variety of home styles and materials that require careful, professional cleaning methods.",
       "We provide house soft washing, roof soft washing, driveway and patio cleaning, and commercial washing with attention to the architectural details common in UA.",
-      "Interested in Upper Arlington service? Check our <a href=\"/pressure-washing-cost-columbus/\">cost guide</a> or see <a href=\"/\">everything we offer</a>.",
+      "Homes in Upper Arlington are often older or historic Franklin County properties with painted wood, brick, and slate or tile roofs that need gentle <a href=\"/house-soft-washing/\">house soft washing</a> rather than harsh pressure. Read <a href=\"/soft-washing-vs-pressure-washing-columbus/\">soft washing vs pressure washing</a> or see <a href=\"/\">everything we offer</a>.",
       "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
     ],
     "faqs": [
