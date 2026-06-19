@@ -1,5 +1,5 @@
 ---
-import { SITE, SERVICES, SERVICE_AREAS, RESOURCES } from '../consts';
+import { SITE, SERVICES, NEIGHBORHOODS, RESOURCES } from '../consts';
 const year = 2026; // static-safe; bump when rebuilding yearly
 ---
 <footer class="site-footer">
@@ -24,7 +24,9 @@ const year = 2026; // static-safe; bump when rebuilding yearly
       <div>
         <h4><a href="/service-areas/">Service Areas</a></h4>
         <ul>
-          {SERVICE_AREAS.map((a) => <li>{a}</li>)}
+          {NEIGHBORHOODS.map((n) => (
+            <li>{n.live ? <a href={`/${n.slug}/`}>{n.name}</a> : n.name}</li>
+          ))}
         </ul>
       </div>
       <div>
