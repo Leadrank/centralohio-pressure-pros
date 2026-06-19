@@ -69,8 +69,8 @@ export const ABOUT = {
     "Central Ohio Pressure Washing focuses on safe, effective exterior cleaning that protects your investment. We use the right techniques — soft washing for organic growth on siding and roofs, appropriate pressure for concrete and hardscapes — so your home looks its best without damage.",
     "We’re local to Columbus, fully insured, and experienced with Central Ohio’s unique challenges: heavy spring pollen, humid summers that grow algae and mold, and harsh freeze-thaw winters that can trap moisture in dirty surfaces. Every job starts with a free written estimate and ends with a property that’s clean and protected.",
     "We are fully licensed to operate in our state and carry comprehensive general liability insurance. Proof of licensing and current insurance certificates are available on request — simply ask when we provide your free written estimate.",
-    "The work is performed by experienced local professionals who specialize in our services. We know the local conditions and standards. {/* OWNER/CREW BIO PLACEHOLDER — replace with real details from the renter once signed. Include owner name and story, years of experience, specific expertise with local conditions, HOAs, materials, crew qualifications, and any manufacturer certifications. Add a photo when available from the renter. */}",
-    "Real results and reviews build trust. Request your free estimate and we’ll share recent before-and-after photos from comparable jobs in your area plus customer references. On-page Google reviews and job-site proof are priorities as we grow our local track record. <strong>For the renter:</strong> Claim/verify your Google Business Profile right away (primary category: our service); post 1–2x weekly with geo-tagged before/after photos from each service area, ask every completed job for a 5-star review, and reply to every review within 24 hours — this is one of the highest-ROI local ranking signals."
+    "The work is performed by experienced local professionals who specialize in our services. We know the local conditions and standards.",
+    "Real results and reviews build trust. Request your free estimate and we’ll share recent before-and-after photos from comparable jobs in your area plus customer references. On-page Google reviews and job-site proof are priorities as we grow our local track record."
   ],
   "trustHeading": "What You Can Count On",
   "trustFeatures": [
@@ -238,7 +238,7 @@ export const SERVICE_CONTENT = {
       },
       {
         "q": "Can I see real reviews or recent work?",
-        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process. For the renter: Claim/verify your Google Business Profile right away (primary category matching your service); post weekly with geo-tagged before/afters, and actively collect 5-star reviews after every job."
+        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process."
       }
     ],
     "ctaHeading": "Get a Free House Soft Washing Estimate"
@@ -283,7 +283,7 @@ export const SERVICE_CONTENT = {
       },
       {
         "q": "Can I see real reviews or recent work?",
-        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process. For the renter: Claim/verify your Google Business Profile right away (primary category matching your service); post weekly with geo-tagged before/afters, and actively collect 5-star reviews after every job."
+        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process."
       }
     ],
     "ctaHeading": "Get a Free Roof Soft Washing Estimate"
@@ -328,7 +328,7 @@ export const SERVICE_CONTENT = {
       },
       {
         "q": "Can I see real reviews or recent work?",
-        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process. For the renter: Claim/verify your Google Business Profile right away (primary category matching your service); post weekly with geo-tagged before/afters, and actively collect 5-star reviews after every job."
+        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process."
       }
     ],
     "ctaHeading": "Get a Free Driveway & Concrete Cleaning Estimate"
@@ -373,7 +373,7 @@ export const SERVICE_CONTENT = {
       },
       {
         "q": "Can I see real reviews or recent work?",
-        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process. For the renter: Claim/verify your Google Business Profile right away (primary category matching your service); post weekly with geo-tagged before/afters, and actively collect 5-star reviews after every job."
+        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process."
       }
     ],
     "ctaHeading": "Get a Free Deck & Patio Cleaning Estimate"
@@ -418,7 +418,7 @@ export const SERVICE_CONTENT = {
       },
       {
         "q": "Can I see real reviews or recent work?",
-        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process. For the renter: Claim/verify your Google Business Profile right away (primary category matching your service); post weekly with geo-tagged before/afters, and actively collect 5-star reviews after every job."
+        "a": "Of course. Request a free estimate and we will send recent before-and-after photos from similar jobs in the area plus references. Google reviews and on-site proof are part of our process."
       }
     ],
     "ctaHeading": "Get a Free Commercial Washing Quote"
