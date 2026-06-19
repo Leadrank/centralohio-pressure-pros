@@ -3,11 +3,10 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 
-// Site URL — used for canonical tags, sitemap, and absolute schema URLs.
-// Sitemap priority tiers. NOTE: Google ignores <priority>/<changefreq> (Bing reads them
-// mildly); the durable value is grouping the money pages high. We deliberately do NOT emit
-// <lastmod> — a build-time lastmod on every page each deploy is fake freshness that can
-// backfire; leave it to honest, real changes only.
+// Sitemap priority tiers. NOTE: Google ignores <priority>/<changefreq> (Bing still
+// reads them mildly); the durable value is just grouping the money pages high. We do
+// NOT stamp <lastmod> here — a build-time lastmod on every page on every deploy is fake
+// freshness that can backfire. Leave lastmod to honest, real changes only.
 const LOW_PRIORITY = new Set(['about', 'contact', 'service-areas']); // utility pages
 
 export default defineConfig({

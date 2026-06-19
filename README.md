@@ -10,3 +10,11 @@ npm run build      # -> dist/
 npm run dev        # local preview
 npm run deploy     # build + wrangler deploy
 ```
+
+**Baked-in redirects (www + http → clean https non-www)**
+
+The generated `worker.js` automatically issues a 301 redirect for any request to
+`www.centralohiopressurewashing.com` or plain http. This prevents Google from treating the www
+variant as an "alternate page with proper canonical tag" (a common cause of
+"not indexed" on new sites). All canonicals, sitemaps, and robots.txt already use
+the clean non-www domain.

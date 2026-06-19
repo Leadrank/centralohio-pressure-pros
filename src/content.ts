@@ -429,8 +429,6 @@ export const LOCATION_CONTENT = {
   "westerville": {
     "name": "Westerville",
     "slug": "westerville",
-    "serviceType": "Roof Soft Washing",
-    "serviceNoun": "roof soft washing",
     "metaDescription": "Roof soft washing and house soft washing in Westerville, OH. Safe, low-pressure algae and moss removal for shaded roofs and siding. Free estimates.",
     "intro": [
       "Westerville homeowners and property managers trust us for safe exterior cleaning that handles the area's mature trees, shade, and typical Ohio weather challenges.",
@@ -447,13 +445,13 @@ export const LOCATION_CONTENT = {
         "q": "How soon can you come to Westerville?",
         "a": "We can usually schedule within a week or two after your estimate. Larger or time-sensitive commercial jobs can often be prioritized."
       }
-    ]
+    ],
+    "serviceType": "Roof Soft Washing",
+    "serviceNoun": "roof soft washing"
   },
   "dublin": {
     "name": "Dublin",
     "slug": "dublin",
-    "serviceType": "House Soft Washing",
-    "serviceNoun": "house soft washing",
     "metaDescription": "House soft washing in Dublin, OH. Gentle, low-pressure siding and exterior cleaning for Dublin homes and HOAs. Local crew, free estimates.",
     "intro": [
       "Dublin's mix of established neighborhoods and corporate areas means a wide range of exterior surfaces that benefit from regular professional cleaning.",
@@ -470,13 +468,13 @@ export const LOCATION_CONTENT = {
         "q": "Can you clean around corporate or medical buildings in Dublin?",
         "a": "Absolutely. We have experience working around occupied commercial and medical properties with minimal disruption."
       }
-    ]
+    ],
+    "serviceType": "House Soft Washing",
+    "serviceNoun": "house soft washing"
   },
   "sunbury": {
     "name": "Sunbury",
     "slug": "sunbury",
-    "serviceType": "Driveway & Concrete Pressure Washing",
-    "serviceNoun": "driveway and concrete pressure washing",
     "metaDescription": "Driveway and concrete pressure washing in Sunbury, OH. Removes dirt, algae, and freeze-thaw staining from drives, aprons, and walkways. Free estimates.",
     "intro": [
       "Sunbury and the surrounding Delaware County area have a growing mix of newer construction and established properties that all face the same Central Ohio exterior challenges.",
@@ -493,13 +491,13 @@ export const LOCATION_CONTENT = {
         "q": "How far in advance do I need to schedule in Sunbury?",
         "a": "Most residential jobs can be scheduled within 1–2 weeks. We can often accommodate sooner for time-sensitive situations."
       }
-    ]
+    ],
+    "serviceType": "Driveway & Concrete Pressure Washing",
+    "serviceNoun": "driveway and concrete pressure washing"
   },
   "powell": {
     "name": "Powell",
     "slug": "powell",
-    "serviceType": "House & Roof Soft Washing",
-    "serviceNoun": "house and roof soft washing",
     "metaDescription": "House and roof soft washing in Powell, OH. Multi-surface exterior cleaning for larger Powell and Liberty Township homes. Local crew, free estimates.",
     "intro": [
       "Powell and Liberty Township feature a blend of established neighborhoods and newer developments, all benefiting from regular professional exterior maintenance.",
@@ -516,13 +514,13 @@ export const LOCATION_CONTENT = {
         "q": "Can you handle larger or multi-surface jobs in Powell?",
         "a": "Yes. Many Powell properties have multiple surfaces (house + roof + large driveway/patio). We provide comprehensive quotes."
       }
-    ]
+    ],
+    "serviceType": "House & Roof Soft Washing",
+    "serviceNoun": "house and roof soft washing"
   },
   "new-albany": {
     "name": "New Albany",
     "slug": "new-albany",
-    "serviceType": "Soft Washing",
-    "serviceNoun": "soft washing",
     "metaDescription": "Soft washing in New Albany, OH. Careful, low-pressure cleaning for Georgian brick, painted trim, and roofs on upscale New Albany homes. Free estimates.",
     "intro": [
       "New Albany's upscale neighborhoods and corporate presence mean high standards for exterior appearance and curb appeal.",
@@ -539,13 +537,13 @@ export const LOCATION_CONTENT = {
         "q": "Do you have experience with higher-end or architecturally sensitive homes?",
         "a": "Yes. We are experienced with a wide range of siding, roofing, and hardscape materials and take care to use the appropriate methods for each."
       }
-    ]
+    ],
+    "serviceType": "Soft Washing",
+    "serviceNoun": "soft washing"
   },
   "hilliard": {
     "name": "Hilliard",
     "slug": "hilliard",
-    "serviceType": "Commercial Pressure Washing",
-    "serviceNoun": "commercial pressure washing",
     "metaDescription": "Commercial pressure washing in Hilliard, OH. Storefronts, sidewalks, dumpster pads, and flatwork along Hilliard commercial corridors. Free estimates.",
     "intro": [
       "Hilliard offers a diverse mix of older neighborhoods, newer subdivisions, and commercial corridors — all of which benefit from regular professional exterior cleaning.",
@@ -562,13 +560,13 @@ export const LOCATION_CONTENT = {
         "q": "Can you handle commercial or multi-tenant properties in Hilliard?",
         "a": "Yes. We have experience with retail, office, and light industrial properties as well as HOAs and apartment communities."
       }
-    ]
+    ],
+    "serviceType": "Commercial Pressure Washing",
+    "serviceNoun": "commercial pressure washing"
   },
   "upper-arlington": {
     "name": "Upper Arlington",
     "slug": "upper-arlington",
-    "serviceType": "House Soft Washing",
-    "serviceNoun": "house soft washing",
     "metaDescription": "House soft washing in Upper Arlington, OH. Gentle, low-pressure cleaning for older and historic UA homes with painted wood, brick, and slate. Free estimates.",
     "intro": [
       "Upper Arlington's established neighborhoods feature a wide variety of home styles and materials that require careful, professional cleaning methods.",
@@ -585,7 +583,9 @@ export const LOCATION_CONTENT = {
         "q": "Are you experienced with older or historic homes in UA?",
         "a": "Yes. We are familiar with the variety of siding, roofing, and hardscape materials found in Upper Arlington and use appropriate techniques for each."
       }
-    ]
+    ],
+    "serviceType": "House Soft Washing",
+    "serviceNoun": "house soft washing"
   }
 } as const;
 
