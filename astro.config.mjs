@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
+import sitemap, { ChangeFreqEnum } from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 
 // Sitemap priority tiers. NOTE: Google ignores <priority>/<changefreq> (Bing still
@@ -17,9 +17,9 @@ export default defineConfig({
     filter: (page) => !page.includes('/thank-you/'),
     serialize(item) {
       const path = new URL(item.url).pathname.replace(/^\/|\/$/g, '');
-      if (path === '') { item.priority = 1.0; item.changefreq = 'weekly'; }
-      else if (LOW_PRIORITY.has(path)) { item.priority = 0.5; item.changefreq = 'monthly'; }
-      else { item.priority = 0.8; item.changefreq = 'monthly'; }
+      if (path === '') { item.priority = 1.0; item.changefreq = ChangeFreqEnum.WEEKLY; }
+      else if (LOW_PRIORITY.has(path)) { item.priority = 0.5; item.changefreq = ChangeFreqEnum.MONTHLY; }
+      else { item.priority = 0.8; item.changefreq = ChangeFreqEnum.MONTHLY; }
       return item;
     },
   })],

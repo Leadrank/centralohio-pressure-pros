@@ -39,7 +39,7 @@ const ogImage = new URL('/og.png', Astro.site).href;
 
 // BreadcrumbList from the URL path (Home > …). Emitted only on non-home pages.
 const segs = path.split('/').filter(Boolean);
-const tc = (s) => s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+const tc = (s: string) => s.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
 const _crumbs = [{ name: 'Home', url: new URL('/', Astro.site).href }];
 let _acc = '';
 for (const s of segs) { _acc += '/' + s; _crumbs.push({ name: tc(s), url: new URL(_acc + '/', Astro.site).href }); }

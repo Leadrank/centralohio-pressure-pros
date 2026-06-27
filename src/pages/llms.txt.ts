@@ -52,7 +52,7 @@ export const GET: APIRoute = () => {
   if (RESOURCES && RESOURCES.length) {
     out.push('## Guides & Resources');
     out.push('');
-    for (const r of RESOURCES as any[]) out.push(`- [${r.title}](${base}/${r.slug}/): ${r.blurb}`);
+    for (const r of RESOURCES as readonly any[]) out.push(`- [${r.title}](${base}/${r.slug}/): ${r.blurb}`);
     out.push('');
   }
 
