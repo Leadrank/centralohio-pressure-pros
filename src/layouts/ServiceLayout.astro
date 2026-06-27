@@ -10,10 +10,10 @@ interface Props {
   h1: string;            // keyword-rich H1
   metaDescription: string;
   heroSub: string;
-  intro: string[];       // body paragraphs
+  intro: readonly string[];       // body paragraphs
   needTitle: string;     // e.g. "When You Need Tree Trimming"
-  needItems: string[];   // bullet points (may include <strong>)
-  faqs: FAQ[];
+  needItems: readonly string[];   // bullet points (may include <strong>)
+  faqs: readonly FAQ[];
   ctaHeading: string;
 }
 

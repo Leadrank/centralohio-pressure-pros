@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { SITE, SERVICES, SERVICE_AREAS } from '../consts';
 import { CONTACT } from '../content';
+// Optional per-site qualifier dropdown (present in content.ts on some sites, absent on others).
+const qualifier = (CONTACT as { qualifier?: { label: string; name: string; options: readonly string[] } }).qualifier;
 
 // Form delivery: prefer Web3Forms (emails the lead straight to the owner's inbox,
 // free, no backend) when an access key is set; otherwise fall back to the leadsink
@@ -48,11 +50,11 @@ const formReady = useWeb3Forms || SITE.leadEndpoint.length > 0;
           <label>Phone<input type="tel" name="phone" required autocomplete="tel" /></label>
           <label>Email<input type="email" name="email" autocomplete="email" /></label>
           <label>Service Address (city/suburb)<input type="text" name="address" autocomplete="street-address" /></label>
-          {CONTACT.qualifier && (
-            <label>{CONTACT.qualifier.label}
-              <select name={CONTACT.qualifier.name}>
+          {qualifier && (
+            <label>{qualifier.label}
+              <select name={qualifier.name}>
                 <option value="">Select…</option>
-                {CONTACT.qualifier.options.map((o) => <option>{o}</option>)}
+                {qualifier.options.map((o) => <option>{o}</option>)}
               </select>
             </label>
           )}

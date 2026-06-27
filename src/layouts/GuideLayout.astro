@@ -10,7 +10,7 @@ interface Props {
   title: string;          // full <title>
   metaDescription: string;
   datePublished: string;  // ISO date, passed in (no Date.now in build)
-  faqs?: FAQ[];
+  faqs?: readonly FAQ[];
 }
 
 const { slug, h1, title, metaDescription, datePublished, faqs = [] } = Astro.props;

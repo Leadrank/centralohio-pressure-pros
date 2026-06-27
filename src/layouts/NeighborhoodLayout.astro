@@ -8,8 +8,8 @@ interface Props {
   name: string;          // e.g. "Dublin"
   slug: string;          // e.g. "dublin"
   metaDescription: string;
-  intro: string[];       // genuinely-local body paragraphs (may include HTML)
-  faqs?: FAQ[];
+  intro: readonly string[];       // genuinely-local body paragraphs (may include HTML)
+  faqs?: readonly FAQ[];
   /** Optional per-suburb service focus. Both default to the site-wide values,
    *  so existing location pages render exactly as before unless they opt in. */
   serviceType?: string;  // Title case — H1/title/schema (e.g. "Patio Cleaning")
