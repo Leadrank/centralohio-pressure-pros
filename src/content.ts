@@ -586,6 +586,75 @@ export const LOCATION_CONTENT = {
     ],
     "serviceType": "House Soft Washing",
     "serviceNoun": "house soft washing"
+  },
+  "gahanna": {
+    "name": "Gahanna",
+    "slug": "gahanna",
+    "metaDescription": "Deck and patio cleaning in Gahanna, OH. Safe washing for wood, composite, and paver surfaces on wooded, creekside lots. Local crew, free estimates.",
+    "intro": [
+      "Gahanna homeowners and property managers trust us for safe exterior cleaning that handles the area's mature trees, creekside humidity, and typical Central Ohio weather.",
+      "We provide house soft washing, roof soft washing, driveway and sidewalk cleaning, and deck and patio restoration throughout Gahanna and surrounding neighborhoods.",
+      "Many Gahanna homes sit on wooded Franklin County lots near Big Walnut Creek and the Creekside district, where shade and humidity leave decks and patios slippery with algae and moss — exactly what our <a href=\"/deck-patio-cleaning/\">deck and patio cleaning</a> safely restores. Wondering when to schedule? See our guide to the <a href=\"/best-time-to-pressure-wash-house-ohio/\">best time of year to wash your home</a>, or browse <a href=\"/\">all our Central Ohio services</a>.",
+      "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
+    ],
+    "faqs": [
+      {
+        "q": "Do you serve all of Gahanna?",
+        "a": "Yes — we work throughout Gahanna, including Olde Gahanna, the Creekside area, and newer subdivisions."
+      },
+      {
+        "q": "Can you clean wood and composite decks in Gahanna?",
+        "a": "Yes. We match the method to the material — gentle soft washing for wood and composite, and appropriate pressure with joint cleaning for paver patios."
+      }
+    ],
+    "serviceType": "Deck & Patio Cleaning",
+    "serviceNoun": "deck and patio cleaning"
+  },
+  "delaware": {
+    "name": "Delaware",
+    "slug": "delaware",
+    "metaDescription": "House soft washing in Delaware, OH. Gentle, low-pressure siding cleaning for historic downtown homes and newer subdivisions. Local crew, free estimates.",
+    "intro": [
+      "Delaware homeowners and property managers trust us for safe exterior cleaning suited to the mix of historic and newer homes across Delaware County's seat.",
+      "We provide house soft washing, roof soft washing, driveway and sidewalk cleaning, and deck and patio restoration throughout Delaware and the surrounding area.",
+      "Delaware's historic neighborhoods near downtown and Ohio Wesleyan University include older homes with painted wood and brick that call for gentle <a href=\"/house-soft-washing/\">house soft washing</a> rather than harsh pressure, while newer subdivisions along the US-23 and Sawmill Parkway corridors benefit from the same careful approach. Learn <a href=\"/soft-washing-vs-pressure-washing-columbus/\">why soft washing beats pressure washing</a> on delicate surfaces, or see <a href=\"/\">everything we offer across Central Ohio</a>.",
+      "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
+    ],
+    "faqs": [
+      {
+        "q": "Do you serve all of Delaware and Delaware County?",
+        "a": "Yes — we regularly work in the city of Delaware and throughout the surrounding Delaware County communities."
+      },
+      {
+        "q": "Do you have experience with older or historic homes near downtown Delaware?",
+        "a": "Yes. We are familiar with the painted wood, brick, and other materials common on older homes and use gentle, appropriate methods for each."
+      }
+    ],
+    "serviceType": "House Soft Washing",
+    "serviceNoun": "house soft washing"
+  },
+  "lewis-center": {
+    "name": "Lewis Center",
+    "slug": "lewis-center",
+    "metaDescription": "Roof soft washing in Lewis Center, OH. Safe, low-pressure removal of black algae and moss from large, shaded shingle roofs. Local crew, free estimates.",
+    "intro": [
+      "Lewis Center homeowners and property managers trust us for safe exterior cleaning built for the area's larger, newer homes and mature tree cover.",
+      "We provide roof soft washing, house soft washing, driveway and sidewalk cleaning, and deck and patio restoration throughout Lewis Center and the surrounding area.",
+      "Many Lewis Center homes in the Olentangy school corridor are larger, newer builds with big asphalt-shingle roofs that sit under tree shade — ideal conditions for the black algae streaking our <a href=\"/roof-soft-washing/\">roof soft washing</a> removes without high pressure. See our guide to the <a href=\"/best-time-to-pressure-wash-house-ohio/\">best time of year to wash your home</a>, or explore <a href=\"/\">all our Central Ohio services</a>.",
+      "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
+    ],
+    "faqs": [
+      {
+        "q": "Do you serve all of Lewis Center?",
+        "a": "Yes — we work throughout Lewis Center and the surrounding Delaware County and Olentangy-corridor communities."
+      },
+      {
+        "q": "Can you handle larger, multi-surface homes in Lewis Center?",
+        "a": "Yes. Many Lewis Center homes have large roofs plus siding, driveways, and patios. We provide comprehensive quotes that cover every surface in one visit."
+      }
+    ],
+    "serviceType": "Roof Soft Washing",
+    "serviceNoun": "roof soft washing"
   }
 } as const;
 
@@ -659,5 +728,27 @@ export const RESOURCE_CONTENT = {
       }
     ],
     "body": "<p>One of the most common questions we get in Central Ohio is whether soft washing or pressure washing is the right choice for a home. The answer depends entirely on the surface and the type of dirt or growth you’re trying to remove.</p>\n\n<h2>Soft washing: best for organic growth on delicate surfaces</h2>\n<p>Soft washing uses low pressure + professional biodegradable chemicals to kill algae, mold, mildew, and moss at the root. It is the right choice for:</p>\n<ul>\n<li>Vinyl, wood, fiber cement, and other siding</li>\n<li>Asphalt shingles and most residential roofing</li>\n<li>Wood and composite decks</li>\n<li>Stucco and EIFS in many cases</li>\n</ul>\n<p>Benefits: thorough removal of growth, much lower risk of surface damage, and results that typically last longer because the organisms are killed rather than just blasted off the surface.</p>\n\n<h2>Pressure washing: best for hard surfaces and embedded stains</h2>\n<p>Pressure washing (using appropriate pressure and nozzles) is the right choice for:</p>\n<ul>\n<li>Concrete driveways, sidewalks, and patios</li>\n<li>Brick and some stone hardscapes</li>\n<li>Some commercial or industrial surfaces</li>\n</ul>\n<p>Benefits: removes embedded dirt, oil stains, and weathering that chemicals alone won’t lift. When done correctly it restores the original color and texture without damaging the surface.</p>\n\n<h2>Common mistakes we see</h2>\n<ul>\n<li>Using high pressure on siding or roofs — causes damage, peeling, and water intrusion.</li>\n<li>Using only pressure on algae-covered surfaces — removes the top layer but leaves roots, so growth returns quickly.</li>\n<li>Using the wrong chemicals or no chemicals at all — leads to poor results and wasted time/money.</li>\n</ul>\n\n<h2>How we decide on your property</h2>\n<p>During your free estimate we evaluate each surface:</p>\n<ul>\n<li>What type of growth or staining is present (organic vs dirt/oil)?</li>\n<li>What is the surface material and condition?</li>\n<li>What pressure and/or chemistry is appropriate and safe?</li>\n</ul>\n<p>Most residential jobs are a combination: soft washing on the house and roof, controlled pressure on concrete and hardscapes, and tailored methods for decks and patios.</p>\n\n<p>Want to know what the right approach is for your specific home? Get a free, no-pressure estimate and we’ll walk you through the recommended plan for each surface.</p>"
+  },
+  "best-time-to-pressure-wash-house-ohio": {
+    "slug": "best-time-to-pressure-wash-house-ohio",
+    "h1": "Best Time of Year to Pressure Wash Your House in Central Ohio",
+    "title": "Best Time of Year to Pressure Wash Your House in Central Ohio",
+    "metaDescription": "When to soft wash or pressure wash your house in Columbus, OH. How Ohio's spring pollen, humid summers, fall leaves, and freeze-thaw winters affect the best timing.",
+    "datePublished": "2026-06-27",
+    "faqs": [
+      {
+        "q": "When is the best time to pressure wash a house in Central Ohio?",
+        "a": "Late spring through early fall (roughly April to October) is ideal. Temperatures are reliably above freezing, cleaning solutions work as intended, and surfaces dry properly. Spring is popular for clearing winter grime and pollen; fall is great for removing a summer's worth of algae before winter."
+      },
+      {
+        "q": "Can you pressure wash or soft wash in winter in Ohio?",
+        "a": "It's possible on milder days, but freezing temperatures cause water to ice over on surfaces and walkways and reduce how well soft wash chemicals work. We generally recommend waiting for a stretch of above-freezing weather, which is why most Central Ohio washing happens spring through fall."
+      },
+      {
+        "q": "Should I soft wash in spring or fall?",
+        "a": "Both work well. Spring removes pollen, salt film, and winter buildup so your home looks fresh for the season. Fall removes the algae and mildew that grow over a humid Ohio summer and helps surfaces head into winter clean. Many homeowners alternate or pick whichever fits their schedule."
+      }
+    ],
+    "body": "<p>Central Ohio's four distinct seasons each affect your home's exterior differently — and they shape when exterior cleaning works best. This guide walks through the year so you can plan house soft washing, roof cleaning, and driveway washing for the best results.</p>\n\n<p><strong>The short answer:</strong> for most homes in the Columbus area, late spring through early fall (about April to October) is the sweet spot. Temperatures stay above freezing, cleaning solutions perform as designed, and surfaces dry properly. But each season has its own advantages.</p>\n\n<h2>Spring (April–May): clear out winter</h2>\n<p>Spring is one of the busiest and best times to wash. Winter leaves behind road-salt film, grime, and the first flush of algae, and Central Ohio's heavy spring pollen coats siding, decks, and concrete in yellow-green dust. A spring <a href=\"/house-soft-washing/\">house soft washing</a> resets your home's appearance for the year and removes pollen that can otherwise stain.</p>\n\n<h2>Summer (June–August): peak growing season</h2>\n<p>Ohio's humid, warm summers are prime conditions for algae, mold, and mildew — especially on shaded, north-facing surfaces and roofs. Summer is an excellent time for <a href=\"/roof-soft-washing/\">roof soft washing</a> to remove black algae streaks, and for tackling growth on siding and decks. Long daylight hours mean surfaces dry quickly. The only caution is scheduling around stretches of rain.</p>\n\n<h2>Fall (September–October): the smart pre-winter wash</h2>\n<p>Fall may be the most underrated time to wash. Removing a summer's worth of algae, mildew, and grime before winter means organic growth isn't trapped against your surfaces under snow and ice for months. A fall <a href=\"/driveway-concrete-pressure-washing/\">driveway and concrete cleaning</a> also clears slippery growth before the freeze-thaw season makes walkways hazardous.</p>\n\n<h2>Winter (November–March): wait for a warm spell</h2>\n<p>Central Ohio winters bring freezing temperatures that cause rinse water to ice over on surfaces and walkways, and cold reduces how effectively soft wash chemicals break down growth. Washing is possible on milder, above-freezing days, but for most homeowners it's worth waiting for spring. Winter is a good time to plan and book ahead so you're first in line when the weather breaks.</p>\n\n<h2>What matters more than the calendar</h2>\n<ul>\n<li><strong>Temperature</strong> — above freezing (ideally 45°F+) for chemicals to work and surfaces to dry.</li>\n<li><strong>Dry weather window</strong> — surfaces should have time to dry; soft wash solutions need dwell time without heavy rain washing them off too soon.</li>\n<li><strong>How much growth is present</strong> — heavy algae or mildew shouldn't wait. If your siding or roof is visibly streaked, the best time is soon, regardless of season.</li>\n<li><strong>Your goals</strong> — washing before a sale, a party, or the holidays is worth scheduling around even if it's not the textbook season.</li>\n</ul>\n\n<h2>How often, not just when</h2>\n<p>Timing within the year matters less than keeping a consistent schedule. Most Central Ohio homes do well with cleaning every 1–2 years; shaded or wooded lots may need it annually. See <a href=\"/how-often-should-you-soft-wash-your-house/\">how often you should soft wash your house</a> for the full breakdown, and our <a href=\"/pressure-washing-cost-columbus/\">Columbus pressure washing cost guide</a> for typical pricing.</p>\n\n<p>Not sure when to schedule your home? Get a free, no-obligation estimate and we'll recommend the best timing and approach for your specific surfaces.</p>"
   }
 } as const;

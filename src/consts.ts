@@ -112,6 +112,24 @@ export const NEIGHBORHOODS = [
     "name": "Upper Arlington",
     "blurb": "House soft washing, roof washing, and concrete cleaning for Upper Arlington, OH homes.",
     "live": true
+  },
+  {
+    "slug": "gahanna",
+    "name": "Gahanna",
+    "blurb": "Deck, patio, and exterior cleaning for Gahanna, OH homes with wooded, creekside lots.",
+    "live": true
+  },
+  {
+    "slug": "delaware",
+    "name": "Delaware",
+    "blurb": "House soft washing and exterior cleaning for historic and newer Delaware, OH homes.",
+    "live": true
+  },
+  {
+    "slug": "lewis-center",
+    "name": "Lewis Center",
+    "blurb": "Roof and house soft washing for larger, shaded homes in Lewis Center, OH.",
+    "live": true
   }
 ] as const;
 
@@ -130,5 +148,10 @@ export const RESOURCES = [
     "slug": "soft-washing-vs-pressure-washing-columbus",
     "title": "Soft Washing vs Pressure Washing in Columbus, OH: Which Is Right for Your Home?",
     "blurb": "When to use soft washing vs pressure washing for siding, roofs, driveways, and decks in Central Ohio."
+  },
+  {
+    "slug": "best-time-to-pressure-wash-house-ohio",
+    "title": "Best Time of Year to Pressure Wash Your House in Central Ohio",
+    "blurb": "How Ohio's spring pollen, humid summers, fall leaves, and freeze-thaw winters affect the best time to soft wash and pressure wash."
   }
 ] as const;
