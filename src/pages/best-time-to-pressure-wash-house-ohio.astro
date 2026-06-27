@@ -1,0 +1,8 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { RESOURCE_CONTENT } from '../content';
+const d = RESOURCE_CONTENT['best-time-to-pressure-wash-house-ohio'];
+---
+<GuideLayout slug={d.slug} h1={d.h1} title={d.title} metaDescription={d.metaDescription} datePublished={d.datePublished} faqs={d.faqs}>
+  <Fragment set:html={d.body} />
+</GuideLayout>
