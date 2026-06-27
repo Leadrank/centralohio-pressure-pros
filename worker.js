@@ -22,9 +22,12 @@ export default {
         url.pathname + url.search + url.hash,
         `https://${cleanHost}`
       );
-      const res = Response.redirect(target.toString(), 301);
-      res.headers.set('Strict-Transport-Security', HSTS_HEADER);
-      return res;
+      // Build the 301 manually — the Response from Response.redirect() has
+      // immutable headers, so an HSTS header set on it is silently dropped.
+      return new Response(null, {
+        status: 301,
+        headers: { Location: target.toString(), 'Strict-Transport-Security': HSTS_HEADER },
+      });
     }
 
     // Delegate to the real Astro-built worker (handles pages + static assets via ASSETS binding)
@@ -35,9 +38,10 @@ export default {
       response = await astroWorker(request, env, ctx);
     }
 
-    if (response && response.headers) {
-      response.headers.set('Strict-Transport-Security', HSTS_HEADER);
-    }
+    // Re-wrap so headers are mutable — responses from the ASSETS binding (static
+    // pages) are immutable, so a direct headers.set() silently no-ops.
+    response = new Response(response.body, response);
+    response.headers.set('Strict-Transport-Security', HSTS_HEADER);
 
     return response;
   }
