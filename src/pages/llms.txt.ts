@@ -60,7 +60,7 @@ export const GET: APIRoute = () => {
   out.push('');
   out.push(`- [All Services](${base}/services/)`);
   out.push(`- [Service Areas](${base}/service-areas/)`);
-  out.push(`- [Reviews](${base}/reviews/)`);
+  if (S.hasReviews !== false) out.push(`- [Reviews](${base}/reviews/)`);
   out.push(`- [About](${base}/about/)`);
   out.push(`- [Frequently Asked Questions](${base}/faq/)`);
   out.push(`- [Contact / Free Estimate](${base}/contact/)`);
