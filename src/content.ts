@@ -252,7 +252,7 @@ export const SERVICE_CONTENT = {
     "intro": [
       "Black algae (Gloeocapsa magma) is common on asphalt shingles in Central Ohio. It doesn't just look bad — it can shorten roof life by holding moisture and blocking UV protection.",
       "High-pressure washing can strip granules and force water under shingles. Our soft wash method kills the algae at the root with low pressure and professional chemicals designed for roofs.",
-      "Results are dramatic and help your roof stay cooler and last longer.",
+      "Results are dramatic and help your roof stay cooler and last longer. Worried about your coverage? See our guide on <a href=\"/does-roof-soft-washing-void-shingle-warranty/\">whether roof soft washing voids your shingle warranty</a>.",
       "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio, years in business, and credentials available from the renter once signed; ask for proof, recent photos, and references during your estimate."
     ],
     "needTitle": "Benefits of Professional Roof Soft Washing",
@@ -655,6 +655,52 @@ export const LOCATION_CONTENT = {
     ],
     "serviceType": "Roof Soft Washing",
     "serviceNoun": "roof soft washing"
+  },
+  "marysville": {
+    "name": "Marysville",
+    "slug": "marysville",
+    "metaDescription": "House and roof soft washing in Marysville, OH. Safe, low-pressure algae and mildew removal for Union County subdivisions and older Uptown homes. Free estimates.",
+    "intro": [
+      "Marysville homeowners and property managers trust us for safe exterior cleaning suited to the area's fast-growing subdivisions and the open, exposed lots common across Union County's county seat.",
+      "We provide house soft washing, roof soft washing, driveway and sidewalk cleaning, and deck and patio restoration throughout Marysville and the surrounding area.",
+      "Many Marysville neighborhoods — from the established streets around Uptown and the US-33 corridor near the Honda and Scotts Miracle-Gro campuses to newer Union County subdivisions — sit on large, open lots where wind-driven pollen and summer humidity leave algae streaks on siding and shingles. Gentle <a href=\"/house-soft-washing/\">house soft washing</a> and <a href=\"/roof-soft-washing/\">roof soft washing</a> lift that growth without the damage high pressure can cause. See <a href=\"/how-often-should-you-soft-wash-your-house/\">how often a Central Ohio home needs washing</a> or browse <a href=\"/\">all our services</a>.",
+      "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
+    ],
+    "faqs": [
+      {
+        "q": "Do you serve all of Marysville and Union County?",
+        "a": "Yes — we work throughout the city of Marysville and the surrounding Union County communities, including newer subdivisions and established neighborhoods near Uptown."
+      },
+      {
+        "q": "Can you handle larger or multi-surface homes in Marysville?",
+        "a": "Yes. Many newer Marysville homes have large roofs plus siding, driveways, and patios. We provide comprehensive quotes that cover every surface in one visit."
+      }
+    ],
+    "serviceType": "House & Roof Soft Washing",
+    "serviceNoun": "house and roof soft washing"
+  },
+  "plain-city": {
+    "name": "Plain City",
+    "slug": "plain-city",
+    "metaDescription": "House and roof soft washing in Plain City, OH and Jerome Village. Safe, low-pressure cleaning for newer Jerome Township homes and historic Main Street properties. Free estimates.",
+    "intro": [
+      "Plain City homeowners and property managers trust us for careful exterior cleaning across a community that straddles Madison and Union counties west of Columbus.",
+      "We provide house soft washing, roof soft washing, driveway and sidewalk cleaning, and deck and patio restoration throughout Plain City and the surrounding Darby-area communities.",
+      "From the large, newer homes of Jerome Village and the Jerome Township subdivisions to the historic homes along Main Street near Pastime Park, Plain City properties sit within the humid, wooded Big Darby Creek watershed where shade and moisture feed algae on siding and shingles. Low-pressure <a href=\"/house-soft-washing/\">house soft washing</a> and <a href=\"/roof-soft-washing/\">roof soft washing</a> remove that growth safely. Not sure which method your home needs? Read <a href=\"/soft-washing-vs-pressure-washing-columbus/\">soft washing vs pressure washing</a> or see <a href=\"/\">everything we offer</a>.",
+      "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
+    ],
+    "faqs": [
+      {
+        "q": "Do you serve Jerome Village and all of Plain City?",
+        "a": "Yes — we work throughout Plain City, Jerome Village, and the surrounding Jerome Township and Darby-area neighborhoods in both Union and Madison counties."
+      },
+      {
+        "q": "Can you clean the larger homes in Jerome Village?",
+        "a": "Yes. Many Jerome Village homes have large rooflines plus siding, driveways, and patios. We provide comprehensive quotes that cover every surface in one visit."
+      }
+    ],
+    "serviceType": "House & Roof Soft Washing",
+    "serviceNoun": "house and roof soft washing"
   }
 } as const;
 
@@ -750,5 +796,31 @@ export const RESOURCE_CONTENT = {
       }
     ],
     "body": "<p>Central Ohio's four distinct seasons each affect your home's exterior differently — and they shape when exterior cleaning works best. This guide walks through the year so you can plan house soft washing, roof cleaning, and driveway washing for the best results.</p>\n\n<p><strong>The short answer:</strong> for most homes in the Columbus area, late spring through early fall (about April to October) is the sweet spot. Temperatures stay above freezing, cleaning solutions perform as designed, and surfaces dry properly. But each season has its own advantages.</p>\n\n<h2>Spring (April–May): clear out winter</h2>\n<p>Spring is one of the busiest and best times to wash. Winter leaves behind road-salt film, grime, and the first flush of algae, and Central Ohio's heavy spring pollen coats siding, decks, and concrete in yellow-green dust. A spring <a href=\"/house-soft-washing/\">house soft washing</a> resets your home's appearance for the year and removes pollen that can otherwise stain.</p>\n\n<h2>Summer (June–August): peak growing season</h2>\n<p>Ohio's humid, warm summers are prime conditions for algae, mold, and mildew — especially on shaded, north-facing surfaces and roofs. Summer is an excellent time for <a href=\"/roof-soft-washing/\">roof soft washing</a> to remove black algae streaks, and for tackling growth on siding and decks. Long daylight hours mean surfaces dry quickly. The only caution is scheduling around stretches of rain.</p>\n\n<h2>Fall (September–October): the smart pre-winter wash</h2>\n<p>Fall may be the most underrated time to wash. Removing a summer's worth of algae, mildew, and grime before winter means organic growth isn't trapped against your surfaces under snow and ice for months. A fall <a href=\"/driveway-concrete-pressure-washing/\">driveway and concrete cleaning</a> also clears slippery growth before the freeze-thaw season makes walkways hazardous.</p>\n\n<h2>Winter (November–March): wait for a warm spell</h2>\n<p>Central Ohio winters bring freezing temperatures that cause rinse water to ice over on surfaces and walkways, and cold reduces how effectively soft wash chemicals break down growth. Washing is possible on milder, above-freezing days, but for most homeowners it's worth waiting for spring. Winter is a good time to plan and book ahead so you're first in line when the weather breaks.</p>\n\n<h2>What matters more than the calendar</h2>\n<ul>\n<li><strong>Temperature</strong> — above freezing (ideally 45°F+) for chemicals to work and surfaces to dry.</li>\n<li><strong>Dry weather window</strong> — surfaces should have time to dry; soft wash solutions need dwell time without heavy rain washing them off too soon.</li>\n<li><strong>How much growth is present</strong> — heavy algae or mildew shouldn't wait. If your siding or roof is visibly streaked, the best time is soon, regardless of season.</li>\n<li><strong>Your goals</strong> — washing before a sale, a party, or the holidays is worth scheduling around even if it's not the textbook season.</li>\n</ul>\n\n<h2>How often, not just when</h2>\n<p>Timing within the year matters less than keeping a consistent schedule. Most Central Ohio homes do well with cleaning every 1–2 years; shaded or wooded lots may need it annually. See <a href=\"/how-often-should-you-soft-wash-your-house/\">how often you should soft wash your house</a> for the full breakdown, and our <a href=\"/pressure-washing-cost-columbus/\">Columbus pressure washing cost guide</a> for typical pricing.</p>\n\n<p>Not sure when to schedule your home? Get a free, no-obligation estimate and we'll recommend the best timing and approach for your specific surfaces.</p>"
+  },
+  "does-roof-soft-washing-void-shingle-warranty": {
+    "slug": "does-roof-soft-washing-void-shingle-warranty",
+    "h1": "Does Roof Soft Washing Void Your Shingle Warranty?",
+    "title": "Does Roof Soft Washing Void Your Shingle Warranty? | Central Ohio",
+    "metaDescription": "Roof soft washing done correctly does not void asphalt-shingle warranties — but high-pressure washing can. How ARMA-recommended low-pressure cleaning protects your roof and your coverage in Central Ohio.",
+    "datePublished": "2026-06-29",
+    "faqs": [
+      {
+        "q": "Does soft washing void an asphalt shingle warranty?",
+        "a": "Low-pressure soft washing performed correctly does not void a typical asphalt-shingle warranty. The Asphalt Roofing Manufacturers Association (ARMA) recognizes low-pressure cleaning with a diluted cleaning solution as an accepted way to remove algae and moss. Always check your specific manufacturer's guidelines, since terms vary by brand."
+      },
+      {
+        "q": "Can pressure washing void my roof warranty?",
+        "a": "It can. High-pressure (power) washing can blast away the protective granules on asphalt shingles and force water under them. Manufacturers generally consider that kind of damage improper maintenance or abuse, which can reduce or void coverage. This is the main reason we never high-pressure wash a shingle roof."
+      },
+      {
+        "q": "Does ARMA recommend a specific roof cleaning method?",
+        "a": "ARMA's guidance for asphalt shingles is to apply a diluted cleaning solution at low pressure and rinse gently — not to power wash. Soft washing follows that approach: roof-safe chemistry kills the algae and moss at the root, then a low-pressure rinse clears it away."
+      },
+      {
+        "q": "Will roof cleaning hurt my shingles in any way?",
+        "a": "Done as a soft wash, no — it's far gentler than the weathering, foot traffic, and granule loss a roof already faces. The risk comes from high pressure or harsh, undiluted chemicals applied incorrectly. Ask any contractor exactly what pressure and solution they'll use, and request proof of insurance before work begins."
+      }
+    ],
+    "body": "<p>It's a fair question, and a smart one to ask before anyone touches your roof: <strong>will cleaning my roof void the shingle warranty?</strong> For Central Ohio homeowners watching black algae streaks creep across their shingles, the worry is real — a new roof is one of the most expensive things you'll buy for your home.</p>\n\n<p><strong>The short answer:</strong> roof <em>soft washing</em>, done correctly at low pressure, does <strong>not</strong> void a typical asphalt-shingle warranty. Roof <em>pressure washing</em> — high-pressure power washing — absolutely can. The method matters, and that distinction is the whole point of this guide.</p>\n\n<h2>What your shingle warranty actually covers</h2>\n<p>Most asphalt-shingle warranties cover <strong>manufacturing defects</strong> — problems with how the shingle was made, not how it's maintained over time. They generally do <em>not</em> cover damage caused by improper maintenance, abuse, or work done outside the manufacturer's guidelines. Cleaning itself usually isn't a covered event either way — but cleaning the <em>wrong</em> way can be treated as damage that reduces or voids your coverage.</p>\n<p>In other words: gentle, correct cleaning keeps you safely inside the lines. Aggressive cleaning that strips granules or drives water under the shingles is exactly the kind of damage a manufacturer can point to when denying a claim. Terms vary by brand, so it's always worth reading your specific warranty.</p>\n\n<h2>Why ARMA recommends soft washing</h2>\n<p>The <strong>Asphalt Roofing Manufacturers Association (ARMA)</strong> — the trade body for the companies that actually make shingles — addresses algae and moss removal directly. Its guidance is to apply a <strong>diluted cleaning solution at low pressure</strong> and rinse gently. It specifically warns against power washing asphalt shingles, because high pressure removes the granules that protect the shingle from UV and weather.</p>\n<p>Soft washing follows that guidance precisely. We use roof-safe, properly diluted chemistry to kill the algae (the black streaks you see are a hardy cyanobacteria, <em>Gloeocapsa magma</em>) and moss at the root, then rinse at low pressure. No blasting, no granule loss, no water forced under the shingles.</p>\n\n<h2>How high pressure puts both your roof and your coverage at risk</h2>\n<ul>\n<li><strong>Granule loss</strong> — the mineral granules are your shingle's sunscreen and armor. Stripping them shortens roof life and is visible, documentable damage.</li>\n<li><strong>Water intrusion</strong> — high pressure can drive water up and under shingles, leading to leaks, rot, and mold in the deck below.</li>\n<li><strong>Lifted or broken shingles</strong> — pressure can crack aging shingles or break the sealant tabs that keep them down in Ohio's wind.</li>\n<li><strong>A voided claim</strong> — if a manufacturer's inspector finds pressure-washing damage, that can be grounds to deny warranty coverage.</li>\n</ul>\n\n<h2>What soft washing does instead</h2>\n<p>A roof soft wash treats the cause, not just the appearance. The cleaning solution kills the algae and moss so it doesn't simply grow back in a few months, and the low-pressure rinse removes it without disturbing the granules. Results typically last 2–4 years in Central Ohio depending on shade and tree cover — and your warranty stays intact. Learn more on our <a href=\"/roof-soft-washing/\">roof soft washing service page</a>.</p>\n\n<h2>Protecting your warranty: what to ask a roof cleaner</h2>\n<ul>\n<li><strong>\"What pressure will you use on my shingles?\"</strong> The right answer is low pressure / soft wash — never power washing.</li>\n<li><strong>\"What cleaning solution do you use, and is it diluted to roof-safe levels?\"</strong> Roof-safe, properly diluted chemistry is the ARMA-aligned approach.</li>\n<li><strong>\"Are you insured, and can I see proof?\"</strong> A professional carries liability insurance and will show it on request before starting work.</li>\n<li><strong>Keep your records.</strong> Save your warranty documents and any cleaning receipts; documentation of proper, low-pressure maintenance is exactly what protects a future claim.</li>\n</ul>\n\n<h2>The bottom line for Central Ohio homeowners</h2>\n<p>You don't have to choose between a clean roof and a valid warranty. Soft washing — the method ARMA points to — removes the algae and moss safely and keeps your coverage intact. The thing to avoid is letting anyone aim a high-pressure wand at your shingles. For related reading, see <a href=\"/soft-washing-vs-pressure-washing-columbus/\">soft washing vs pressure washing</a> and the <a href=\"/best-time-to-pressure-wash-house-ohio/\">best time of year to wash your home</a> in Central Ohio.</p>\n\n<p>Want a roof cleaned the safe, warranty-friendly way? Get a free, no-obligation estimate and we'll walk you through exactly what we'll use on your roof.</p>"
   }
 } as const;

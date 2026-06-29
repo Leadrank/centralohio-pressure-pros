@@ -130,6 +130,18 @@ export const NEIGHBORHOODS = [
     "name": "Lewis Center",
     "blurb": "Roof and house soft washing for larger, shaded homes in Lewis Center, OH.",
     "live": true
+  },
+  {
+    "slug": "marysville",
+    "name": "Marysville",
+    "blurb": "House and roof soft washing for Marysville, OH and Union County homes and subdivisions.",
+    "live": true
+  },
+  {
+    "slug": "plain-city",
+    "name": "Plain City",
+    "blurb": "House and roof soft washing for Plain City, OH, Jerome Village, and Darby-area homes.",
+    "live": true
   }
 ] as const;
 
@@ -153,5 +165,10 @@ export const RESOURCES = [
     "slug": "best-time-to-pressure-wash-house-ohio",
     "title": "Best Time of Year to Pressure Wash Your House in Central Ohio",
     "blurb": "How Ohio's spring pollen, humid summers, fall leaves, and freeze-thaw winters affect the best time to soft wash and pressure wash."
+  },
+  {
+    "slug": "does-roof-soft-washing-void-shingle-warranty",
+    "title": "Does Roof Soft Washing Void Your Shingle Warranty?",
+    "blurb": "How asphalt-shingle warranties treat roof cleaning, why ARMA recommends low-pressure soft washing, and what to avoid in Central Ohio."
   }
 ] as const;
