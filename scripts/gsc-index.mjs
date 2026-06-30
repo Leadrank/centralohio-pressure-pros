@@ -45,6 +45,7 @@ async function getAccessToken(key) {
   return data.access_token;
 }
 
+// Returns: 'ok' | 'quota' | 'error'  (no per-URL noise on the hot path)
 async function requestIndexing(url, token) {
   const res = await fetch('https://indexing.googleapis.com/v3/urlNotifications:publish', {
     method: 'POST',
@@ -54,12 +55,12 @@ async function requestIndexing(url, token) {
     },
     body: JSON.stringify({ url, type: 'URL_UPDATED' }),
   });
-  const data = await res.json();
-  if (res.ok) {
-    console.log(`[gsc-index] ${url} → OK`);
-  } else {
-    console.error(`[gsc-index] ${url} → ${res.status}`, data);
-  }
+  if (res.ok) return 'ok';
+  if (res.status === 429) return 'quota';
+  // One concise line for genuine errors (auth, 403, malformed) — not the full object dump.
+  const body = await res.text().catch(() => '');
+  console.error(`[gsc-index] ${url} → ${res.status} ${body.slice(0, 120)}`);
+  return 'error';
 }
 
 async function main() {
@@ -92,14 +93,29 @@ async function main() {
 
   console.log(`[gsc-index] Requesting GSC re-crawl for ${urls.length} URLs...`);
 
+  let ok = 0, errors = 0, quotaHit = false, submitted = 0;
   for (const url of urls) {
+    submitted++;
+    let result = 'error';
     try {
-      await requestIndexing(url, token);
+      result = await requestIndexing(url, token);
     } catch (e) {
-      console.error('[gsc-index] Error for', url, e.message);
+      // Network/DNS hiccup (e.g. ENOTFOUND). Non-fatal; count and move on.
+      console.error(`[gsc-index] ${url} → fetch failed (${e.cause?.code || e.message})`);
     }
+    if (result === 'quota') {
+      // Daily Indexing-API quota (~200/day, shared across all sites) is spent.
+      // Stop cleanly — the rest will be picked up by the daily index-ping job.
+      console.error(`[gsc-index] quota hit (429) after ${ok} accepted — stopping. Resets ~midnight PT; daily index-ping will continue tomorrow.`);
+      quotaHit = true;
+      break;
+    }
+    if (result === 'ok') ok++;
+    else errors++;
     await new Promise((r) => setTimeout(r, 30)); // be polite
   }
+
+  console.log(`[gsc-index] done · ${ok}/${urls.length} accepted${errors ? `, ${errors} error(s)` : ''}${quotaHit ? ` (quota-limited at ${submitted})` : ''}`);
 }
 
 main().catch((e) => {
