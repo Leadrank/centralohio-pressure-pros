@@ -87,13 +87,13 @@ const breadcrumbList = {
     </a>
 
     {/* Conversion beacon → lead-sink Worker. No-op when leadEndpoint is empty. */}
-    <script define:vars={{ LE: SITE.leadEndpoint, SLUG: SITE.slug }}>
+    <script define:vars={{ EV_URL: SITE.leadEndpoint ? SITE.leadEndpoint + '/e' : '', LEAD_URL: SITE.leadEndpoint ? SITE.leadEndpoint + '/lead' : '', SLUG: SITE.slug }}>
       (function () {
-        if (!LE) return;
+        if (!EV_URL) return;
         function send(type) {
           try {
             var body = JSON.stringify({ site: SLUG, type: type, path: location.pathname });
-            navigator.sendBeacon(LE + '/e', new Blob([body], { type: 'text/plain' }));
+            navigator.sendBeacon(EV_URL, new Blob([body], { type: 'text/plain' }));
           } catch (e) {}
         }
         send('pageview');
@@ -121,7 +121,7 @@ const breadcrumbList = {
                 var v = fd.get(k);
                 if (typeof v === 'string') p.set(k, v);
               });
-              navigator.sendBeacon(LE + '/lead', new Blob([p.toString()], { type: 'application/x-www-form-urlencoded' }));
+              navigator.sendBeacon(LEAD_URL, new Blob([p.toString()], { type: 'application/x-www-form-urlencoded' }));
             } catch (e2) {}
           }
         }, true);
