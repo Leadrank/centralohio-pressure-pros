@@ -6,13 +6,12 @@ import { CONTACT } from '../content';
 // Optional per-site qualifier dropdown (present in content.ts on some sites, absent on others).
 const qualifier = (CONTACT as { qualifier?: { label: string; name: string; options: readonly string[] } }).qualifier;
 
-// Form delivery: prefer Web3Forms (emails the lead straight to the owner's inbox,
-// free, no backend) when an access key is set; otherwise fall back to the leadsink
-// Worker. Either way the conversion beacon in BaseLayout fires on submit, so the
-// dashboard still records form_submit conversions.
-const useWeb3Forms = SITE.formsAccessKey.length > 0;
-const formAction = useWeb3Forms ? 'https://api.web3forms.com/submit' : `${SITE.leadEndpoint}/lead`;
-const formReady = useWeb3Forms || SITE.leadEndpoint.length > 0;
+// Form delivery: posts to the leadsink Worker, which stores the lead in D1, texts
+// the owner, and emails it WITH any uploaded photos attached. We deliberately do NOT
+// use Web3Forms — its free plan rejects file attachments, so a photo submission gets
+// dropped entirely (no email, not even in its dashboard). leadsink has no such limit.
+const formAction = `${SITE.leadEndpoint}/lead`;
+const formReady = SITE.leadEndpoint.length > 0;
 ---
 
 <BaseLayout title={CONTACT.metaTitle} description={CONTACT.metaDescription} path="/contact/">
@@ -32,18 +31,9 @@ const formReady = useWeb3Forms || SITE.leadEndpoint.length > 0;
     <div class="container" style="display:grid; gap:2.5rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
       <div>
         <h2>Request a Free Estimate</h2>
-        <form class="estimate-form" action={formAction} method="POST">
-          {useWeb3Forms ? (
-            <Fragment>
-              <input type="hidden" name="access_key" value={SITE.formsAccessKey} />
-              <input type="hidden" name="redirect" value={`${SITE.url}/thank-you/`} />
-              <input type="hidden" name="subject" value={`New estimate request — ${SITE.brand}`} />
-              <input type="hidden" name="from_name" value={SITE.brand} />
-            </Fragment>
-          ) : (
-            <input type="hidden" name="_redirect" value={`${SITE.url}/thank-you/`} />
-          )}
+        <form class="estimate-form" action={formAction} method="POST" enctype="multipart/form-data">
           <input type="hidden" name="site" value={SITE.slug} />
+          <input type="hidden" name="_redirect" value={`${SITE.url}/thank-you/`} />
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
 
           <label>Name<input type="text" name="name" required autocomplete="name" /></label>
@@ -65,12 +55,15 @@ const formReady = useWeb3Forms || SITE.leadEndpoint.length > 0;
               <option value="Other / Not sure">Other / Not sure</option>
             </select>
           </label>
+          <label>Photos (optional — speeds up your quote)
+            <input type="file" name="attachment" accept="image/*" multiple />
+          </label>
           <label>Details
             <textarea name="message" rows="4" placeholder={CONTACT.detailsPlaceholder}></textarea>
           </label>
           <button type="submit" class="btn btn--primary" style="width:100%">Send My Free Estimate Request</button>
           {!formReady && (
-            <p class="form-note">⚠️ Form delivery isn’t connected yet — set <code>formsAccessKey</code> (Web3Forms) or <code>leadEndpoint</code> in the spec before launch.</p>
+            <p class="form-note">⚠️ Form delivery isn’t connected yet — set <code>leadEndpoint</code> in the spec before launch.</p>
           )}
         </form>
       </div>
