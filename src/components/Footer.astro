@@ -32,7 +32,7 @@ const year = 2026; // static-safe; bump when rebuilding yearly
       <div>
         {RESOURCES.length > 0 && (
           <>
-            <h4>Guides</h4>
+            <h4><a href="/guides/">Guides</a></h4>
             <ul>
               {RESOURCES.map((r) => <li><a href={`/${r.slug}/`}>{r.title}</a></li>)}
             </ul>

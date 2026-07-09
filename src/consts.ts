@@ -170,5 +170,15 @@ export const RESOURCES = [
     "slug": "does-roof-soft-washing-void-shingle-warranty",
     "title": "Does Roof Soft Washing Void Your Shingle Warranty?",
     "blurb": "How asphalt-shingle warranties treat roof cleaning, why ARMA recommends low-pressure soft washing, and what to avoid in Central Ohio."
+  },
+  {
+    "slug": "black-streaks-on-roof-gloeocapsa",
+    "title": "Black Streaks on Your Roof? What Gloeocapsa Is & How to Remove It",
+    "blurb": "Why Central Ohio roofs get black algae streaks, why they start on shaded slopes, and how low-pressure soft washing removes Gloeocapsa magma safely."
+  },
+  {
+    "slug": "remove-oil-stains-concrete-driveway",
+    "title": "How to Remove Oil & Rust Stains From a Concrete Driveway",
+    "blurb": "What actually removes oil and rust from Columbus-area concrete, what makes stains worse, and when hot-water pressure washing beats DIY."
   }
 ] as const;

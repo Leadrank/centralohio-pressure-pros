@@ -39,14 +39,14 @@ const faqSchema = faqs.length
     }
   : null;
 
-// Breadcrumb: Home → this guide. (No standalone resources hub route exists; guides
-// are surfaced from the footer + cross-links, so we keep the trail to real pages.)
+// Breadcrumb: Home → Guides hub → this guide (the /guides/ hub route is real).
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE.url}/` },
-    { '@type': 'ListItem', position: 2, name: h1, item: `${SITE.url}${path}` },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: `${SITE.url}/guides/` },
+    { '@type': 'ListItem', position: 3, name: h1, item: `${SITE.url}${path}` },
   ],
 };
 ---
