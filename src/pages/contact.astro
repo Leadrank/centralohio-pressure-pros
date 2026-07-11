@@ -12,6 +12,8 @@ const qualifier = (CONTACT as { qualifier?: { label: string; name: string; optio
 // dropped entirely (no email, not even in its dashboard). leadsink has no such limit.
 const formAction = `${SITE.leadEndpoint}/lead`;
 const formReady = SITE.leadEndpoint.length > 0;
+// Cloudflare Turnstile (bot defense). Public sitekey; token verified server-side in leadsink /lead.
+const turnstileSiteKey = '0x4AAAAAADy50bQ6Ge_ekEDk';
 ---
 
 <BaseLayout title={CONTACT.metaTitle} description={CONTACT.metaDescription} path="/contact/">
@@ -61,6 +63,7 @@ const formReady = SITE.leadEndpoint.length > 0;
           <label>Details
             <textarea name="message" rows="4" placeholder={CONTACT.detailsPlaceholder}></textarea>
           </label>
+          <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-action="turnstile-spin-v1" style="margin-bottom:1rem"></div>
           <button type="submit" class="btn btn--primary" style="width:100%">Send My Free Estimate Request</button>
           {!formReady && (
             <p class="form-note">⚠️ Form delivery isn’t connected yet — set <code>leadEndpoint</code> in the spec before launch.</p>
@@ -86,6 +89,8 @@ const formReady = SITE.leadEndpoint.length > 0;
   </section>
 
   <CtaBand heading={CONTACT.ctaHeading} />
+
+  <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </BaseLayout>
 
 <style>
