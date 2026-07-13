@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { SITE, SERVICES, RESOURCES } from '../consts';
+import { SITE, SERVICES, RESOURCES, NEIGHBORHOODS } from '../consts';
 
 interface FAQ { q: string; a: string; }
 interface Props {
@@ -22,6 +22,18 @@ const title = `${serviceType} in ${name}, ${SITE.state} | ${SITE.brand}`;
 const h1 = `${serviceType} in ${name}, ${SITE.state}`;
 const path = `/${slug}/`;
 const liveServices = SERVICES.filter((s) => s.live);
+
+// Nearby-area internal-link mesh: link each location page to a deterministic,
+// rotating window of sibling location pages (excluding self). Location pages
+// otherwise only get footer + service-areas-hub links; this cross-links them to
+// each other so every suburb page is discoverable from several relevant pages,
+// which helps indexation. Deterministic (no Date/random) so builds are stable.
+const liveAreas = NEIGHBORHOODS.filter((n) => n.live);
+const _ai = liveAreas.findIndex((n) => n.slug === slug);
+const _win = Math.min(5, Math.max(0, liveAreas.length - 1));
+const nearbyAreas = _ai === -1
+  ? liveAreas.filter((n) => n.slug !== slug).slice(0, _win)
+  : Array.from({ length: _win }, (_, k) => liveAreas[(_ai + k + 1) % liveAreas.length]);
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -96,6 +108,22 @@ const breadcrumbSchema = {
       </div>
     </div>
   </section>
+
+  {nearbyAreas.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="center">
+          <h2>Nearby Service Areas</h2>
+          <p class="lead">We also provide {SITE.serviceNoun} for communities near {name}:</p>
+        </div>
+        <div class="areas" style="margin-top:1.5rem">
+          {nearbyAreas.map((n) => (
+            <a href={`/${n.slug}/`} style="text-decoration:none"><span>{n.name}</span></a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   {faqs.length > 0 && (
     <section class="section">

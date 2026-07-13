@@ -728,6 +728,75 @@ export const LOCATION_CONTENT = {
     ],
     "serviceType": "House & Roof Soft Washing",
     "serviceNoun": "house and roof soft washing"
+  },
+  "worthington": {
+    "name": "Worthington",
+    "slug": "worthington",
+    "metaDescription": "House and roof soft washing in Worthington, OH. Safe, low-pressure algae and moss removal for mature-tree neighborhoods and older Old Worthington and Colonial Hills homes. Free estimates.",
+    "intro": [
+      "Worthington homeowners and property managers trust us for safe exterior cleaning suited to one of Central Ohio's oldest communities, where a mature tree canopy, established neighborhoods, and a mix of historic and mid-century homes all face the same Ohio algae and mildew pressure.",
+      "We provide house soft washing, roof soft washing, driveway and sidewalk cleaning, and deck and patio restoration throughout Worthington and the surrounding Franklin County area.",
+      "From the historic homes around Old Worthington and the High Street (Route 161) corridor to the mid-century streets of Colonial Hills, Worthington Estates, and Worthington Hills, the city's dense tree cover keeps roofs and north-facing siding shaded and damp — ideal conditions for the black algae streaking our <a href=\"/roof-soft-washing/\">roof soft washing</a> removes and the mildew our <a href=\"/house-soft-washing/\">house soft washing</a> lifts from siding. Not sure which your home needs? Read <a href=\"/soft-washing-vs-pressure-washing-columbus/\">soft washing vs pressure washing</a> or see <a href=\"/\">all our Central Ohio services</a>.",
+      "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
+    ],
+    "faqs": [
+      {
+        "q": "Do you serve all of Worthington?",
+        "a": "Yes — we work throughout Worthington, including Old Worthington, Colonial Hills, Worthington Estates, Worthington Hills, and the surrounding Franklin County neighborhoods."
+      },
+      {
+        "q": "Are you experienced with older or historic Worthington homes?",
+        "a": "Yes. Worthington has many older and historic homes with painted wood, brick, and mature landscaping. We use gentle, low-pressure soft washing and protect plantings so we clean effectively without risking delicate surfaces."
+      }
+    ],
+    "serviceType": "House & Roof Soft Washing",
+    "serviceNoun": "house and roof soft washing"
+  },
+  "grove-city": {
+    "name": "Grove City",
+    "slug": "grove-city",
+    "metaDescription": "Pressure washing and soft washing in Grove City, OH. House, roof, driveway, and concrete cleaning for Southwest Franklin County homes, from the Town Center to newer subdivisions. Free estimates.",
+    "intro": [
+      "Grove City homeowners and property managers trust us for safe, effective exterior cleaning across one of Southwest Franklin County's fastest-growing communities, where established streets and large newer subdivisions all battle Central Ohio's algae, pollen, and freeze-thaw grime.",
+      "We provide house soft washing, roof soft washing, driveway and sidewalk cleaning, deck and patio restoration, and commercial washing throughout Grove City and the surrounding Jackson Township area.",
+      "From the historic storefronts and older homes around the Grove City Town Center on Broadway to the newer subdivisions near the Pinnacle golf community and Fryer Park, many properties here have large concrete driveways and aprons that trap dirt, oil, and freeze-thaw staining — exactly what our <a href=\"/driveway-concrete-pressure-washing/\">driveway and concrete pressure washing</a> restores, while gentle <a href=\"/house-soft-washing/\">house soft washing</a> keeps siding algae-free. Check typical pricing in our <a href=\"/pressure-washing-cost-columbus/\">Central Ohio cost guide</a> or browse <a href=\"/\">all our services</a>.",
+      "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
+    ],
+    "faqs": [
+      {
+        "q": "Do you serve all of Grove City?",
+        "a": "Yes — we work throughout Grove City and the surrounding Jackson Township and Southwest Franklin County communities, from the Town Center to the newer subdivisions."
+      },
+      {
+        "q": "Can you remove oil and freeze-thaw stains from Grove City driveways?",
+        "a": "Yes. Newer Grove City homes often have large concrete drives and aprons that show oil drips and winter salt staining. We pre-treat oil and rust stains and use the correct pressure for concrete so surfaces come clean without etching."
+      }
+    ],
+    "serviceType": "Pressure Washing",
+    "serviceNoun": "pressure washing"
+  },
+  "bexley": {
+    "name": "Bexley",
+    "slug": "bexley",
+    "metaDescription": "House soft washing in Bexley, OH. Gentle, low-pressure cleaning for the established brick, Tudor, and painted-wood homes near Main Street and Capital University. Local crew, free estimates.",
+    "intro": [
+      "Bexley homeowners and property managers trust us for careful exterior cleaning built for one of Columbus's most established east-side communities, where mature trees and a stock of older, architecturally distinctive homes call for a gentle, professional touch.",
+      "We provide house soft washing, roof soft washing, driveway and sidewalk cleaning, and deck and patio restoration throughout Bexley and the adjacent Franklin County neighborhoods.",
+      "From the historic homes near Capital University and the Main Street corridor to the tree-lined streets around Jeffrey Park, Bexley's brick Tudors, colonials, and painted-wood houses need the low-pressure <a href=\"/house-soft-washing/\">house soft washing</a> that lifts algae and mildew without damaging delicate older surfaces — never the high pressure that can scar paint or mortar. Learn <a href=\"/soft-washing-vs-pressure-washing-columbus/\">why soft washing beats pressure washing</a> on older homes, or see <a href=\"/\">everything we offer across Central Ohio</a>.",
+      "We are fully licensed and insured. Work is performed by experienced local crews — owner/crew bio and credentials available from the renter once signed; ask for proof, recent photos, and references."
+    ],
+    "faqs": [
+      {
+        "q": "Do you serve all of Bexley?",
+        "a": "Yes — we work throughout Bexley, including the neighborhoods around Capital University, Main Street, and Jeffrey Park."
+      },
+      {
+        "q": "Are you careful with Bexley's older and historic homes?",
+        "a": "Yes. Bexley's established brick, Tudor, and painted-wood homes need gentle methods. We use low-pressure soft washing and protect landscaping and trim, so growth comes off without harming delicate older surfaces."
+      }
+    ],
+    "serviceType": "House Soft Washing",
+    "serviceNoun": "house soft washing"
   }
 } as const;
 
