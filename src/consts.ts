@@ -34,7 +34,10 @@ export const SERVICE_AREAS = [
   "Lewis Center",
   "Delaware",
   "Marysville",
-  "Plain City"
+  "Plain City",
+  "Worthington",
+  "Grove City",
+  "Bexley"
 ] as const;
 
 export const SERVICES = [
@@ -141,6 +144,24 @@ export const NEIGHBORHOODS = [
     "slug": "plain-city",
     "name": "Plain City",
     "blurb": "House and roof soft washing for Plain City, OH, Jerome Village, and Darby-area homes.",
+    "live": true
+  },
+  {
+    "slug": "worthington",
+    "name": "Worthington",
+    "blurb": "House and roof soft washing for Worthington, OH's historic and mature-tree neighborhoods, from Old Worthington to Colonial Hills.",
+    "live": true
+  },
+  {
+    "slug": "grove-city",
+    "name": "Grove City",
+    "blurb": "Pressure washing, soft washing, and concrete cleaning for Grove City, OH and Southwest Franklin County homes and businesses.",
+    "live": true
+  },
+  {
+    "slug": "bexley",
+    "name": "Bexley",
+    "blurb": "Gentle house soft washing and exterior cleaning for the established, historic homes of Bexley, OH.",
     "live": true
   }
 ] as const;
