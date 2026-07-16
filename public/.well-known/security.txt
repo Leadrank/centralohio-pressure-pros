@@ -1,8 +1,4 @@
-Contact: mailto:info@centralohiopressurewashing.com
-Contact: https://centralohiopressurewashing.com/contact/
-Expires: 2027-06-19T23:59:59.000Z
+# Security contact for this site (RFC 9116)
+Contact: mailto:leadrankllc@gmail.com
+Expires: 2027-07-15T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://centralohiopressurewashing.com/.well-known/security.txt
-
-# Security vulnerability reporting.
-# Added per Cloudflare Security Insights.
