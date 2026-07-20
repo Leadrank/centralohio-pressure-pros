@@ -201,5 +201,15 @@ export const RESOURCES = [
     "slug": "remove-oil-stains-concrete-driveway",
     "title": "How to Remove Oil & Rust Stains From a Concrete Driveway",
     "blurb": "What actually removes oil and rust from Columbus-area concrete, what makes stains worse, and when hot-water pressure washing beats DIY."
+  },
+  {
+    "slug": "roof-cleaning-cost-columbus",
+    "title": "How Much Does Roof Cleaning Cost in Columbus, OH? (2026)",
+    "blurb": "Typical Central Ohio roof soft washing price ranges, what drives the cost (roof size, pitch, stories, material, algae severity), and why cleaning costs a fraction of a new roof."
+  },
+  {
+    "slug": "concrete-paver-sealing-columbus",
+    "title": "Should You Seal Your Concrete Driveway or Paver Patio in Central Ohio?",
+    "blurb": "When sealing helps after pressure washing, concrete vs paver sealing, how long to wait, and why Ohio's freeze-thaw winters and road salt make sealing worth considering."
   }
 ] as const;
